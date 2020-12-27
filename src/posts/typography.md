@@ -12,15 +12,11 @@ tags:
 
 Footnotes are supported as part of the Markdown syntax. Here's one in action. Clicking this number[^fn-sample_footnote] will lead you to a footnote. The syntax looks like:
 
-{% highlight text %}
 Clicking this number[^fn-sample_footnote]
-{% endhighlight %}
 
 Each footnote needs the `^fn-` prefix and a unique ID to be referenced for the footnoted content. The syntax for that list looks something like this:
 
-{% highlight text %}
 [^fn-sample_footnote]: Handy! Now click the return link to go back.
-{% endhighlight %}
 
 You can place the footnoted content wherever you like. Markdown parsers should properly place it at the bottom of the post.
 
