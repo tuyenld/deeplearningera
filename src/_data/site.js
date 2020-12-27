@@ -1,5 +1,5 @@
 module.exports = {
-    title: "Deep Learning Era",
+    title: "DeepLearning Era",
     description: "Deep Learning applications",
     keywords: ["deeplearning", "computervision", "embedded"],
     // your site url without trailing slash
