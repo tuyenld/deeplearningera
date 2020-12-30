@@ -52,9 +52,9 @@ module.exports = (config) => {
         return DateTime.fromJSDate(date, { zone: "utc" }).toFormat("d LLLL yyyy hh:mm a");
     });
 
-    // if (process.env.NODE_ENV === "production") {
+    if (process.env.NODE_ENV === "production") {
         config.addTransform("minify-html", minifyHTML);
-    // }
+    }
 
     config.addCollection("posts", postsColl);
     config.addCollection("tagList", tagListColl);
