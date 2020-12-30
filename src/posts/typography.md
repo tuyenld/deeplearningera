@@ -7,6 +7,78 @@ tags:
     - sample
 ---
 
+All come from [markdown-it](https://github.com/markdown-it/markdown-it)  
+Follows the [CommonMark spec](https://spec.commonmark.org/) + adds syntax extensions & sugar (URL autolinking, typographer).
+
+##### Table of Contents  
+[Headers](#headers)  
+[Emphasis](#emphasis)  
+[Footnotes](#footnotes)  
+[Lists](#lists)  
+[Links](#links)  
+[Images](#images)  
+[Code and Syntax Highlighting](#code-and-syntax-highlighting)  
+[Tables](#tables)  
+[Blockquotes](#blockquotes)  
+[Inline HTML](#inline-html)  
+[Horizontal Rule](#horizontal-rule)  
+[Line Breaks](#line-breaks)  
+[YouTube Videos](#youTube-videos)  
+
+## Headers
+
+```
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+```
+
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+
+
+## Emphasis
+
+```
+Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+```
+
+Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
 
 ## Footnotes
 
@@ -20,90 +92,11 @@ Each footnote needs the `^fn-` prefix and a unique ID to be referenced for the f
 
 You can place the footnoted content wherever you like. Markdown parsers should properly place it at the bottom of the post.
 
-This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
-
-Note that there is also a [Cheatsheet specific to Markdown Here](./Markdown-Here-Cheatsheet) if that's what you're looking for. You can also check out [more Markdown tools](./Other-Markdown-Tools).
-
-##### Table of Contents  
-[Headers](#headers)  
-[Emphasis](#emphasis)  
-[Lists](#lists)  
-[Links](#links)  
-[Images](#images)  
-[Code and Syntax Highlighting](#code)  
-[Tables](#tables)  
-[Blockquotes](#blockquotes)  
-[Inline HTML](#html)  
-[Horizontal Rule](#hr)  
-[Line Breaks](#lines)  
-[YouTube Videos](#videos)  
-
-<a name="headers"/>
-
-## Headers
-
-```no-highlight
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-
-Alternatively, for H1 and H2, an underline-ish style:
-
-Alt-H1
-======
-
-Alt-H2
-------
-```
-
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-
-Alternatively, for H1 and H2, an underline-ish style:
-
-Alt-H1
-======
-
-Alt-H2
-------
-
-<a name="emphasis"/>
-
-## Emphasis
-
-```no-highlight
-Emphasis, aka italics, with *asterisks* or _underscores_.
-
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
-
-Combined emphasis with **asterisks and _underscores_**.
-
-Strikethrough uses two tildes. ~~Scratch this.~~
-```
-
-Emphasis, aka italics, with *asterisks* or _underscores_.
-
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
-
-Combined emphasis with **asterisks and _underscores_**.
-
-Strikethrough uses two tildes. ~~Scratch this.~~
-
-
-<a name="lists"/>
-
 ## Lists
 
 (In this example, leading and trailing spaces are shown with with dots: ⋅)
 
-```no-highlight
+```
 1. First ordered list item
 2. Another item
 ⋅⋅* Unordered sub-list. 
@@ -139,13 +132,12 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 - Or minuses
 + Or pluses
 
-<a name="links"/>
 
 ## Links
 
 There are two ways to create links.
 
-```no-highlight
+```
 [I'm an inline-style link](https://www.google.com)
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
@@ -191,11 +183,10 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
 
-<a name="images"/>
 
 ## Images
 
-```no-highlight
+```
 Here's our logo (hover to see the title text):
 
 Inline-style: 
@@ -217,13 +208,12 @@ Reference-style:
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
-<a name="code"/>
 
 ## Code and Syntax Highlighting
 
 Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and *Markdown Here* -- support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. *Markdown Here* supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the [highlight.js demo page](http://softwaremaniacs.org/media/soft/highlight/test.html).
 
-```no-highlight
+```
 Inline `code` has `back-ticks around` it.
 ```
 
@@ -231,7 +221,7 @@ Inline `code` has `back-ticks around` it.
 
 Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
 
-<pre lang="no-highlight"><code>```javascript
+<pre lang=""><code>```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
@@ -265,13 +255,11 @@ But let's throw in a <b>tag</b>.
 ```
 
 
-<a name="tables"/>
-
 ## Tables
 
 Tables aren't part of the core Markdown spec, but they are part of GFM and *Markdown Here* supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.
 
-```no-highlight
+```
 Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
@@ -305,11 +293,9 @@ Markdown | Less | Pretty
 *Still* | `renders` | **nicely**
 1 | 2 | 3
 
-<a name="blockquotes"/>
-
 ## Blockquotes
 
-```no-highlight
+```
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
 
@@ -325,13 +311,12 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 
-<a name="html"/>
 
 ## Inline HTML
 
 You can also use raw HTML in your Markdown, and it'll mostly work pretty well. 
 
-```no-highlight
+```
 <dl>
   <dt>Definition list</dt>
   <dd>Is something people use sometimes.</dd>
@@ -349,7 +334,6 @@ You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
   <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
 </dl>
 
-<a name="hr"/>
 
 ## Horizontal Rule
 
@@ -383,7 +367,6 @@ ___
 
 Underscores
 
-<a name="lines"/>
 
 ## Line Breaks
 
@@ -409,25 +392,20 @@ This line is only separated by a single newline, so it's a separate line in the 
 
 (Technical note: *Markdown Here* uses GFM line breaks, so there's no need to use MD's two-space line breaks.)
 
-<a name="videos"/>
 
 ## YouTube Videos
 
-They can't be added directly but you can add an image with a link to the video like this:
+```html
+<!-- https://gist.github.com/christophengelmayer/0edd4d9b6fdeb6ff551fb80d957fd35d -->
 
-```no-highlight
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
-" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+<div class="relative block h-0 p-0 overflow-hidden" style="padding-top:56.25%;" >
+  <iframe class="absolute top-0 left-0 bottom-0 w-full h-full" src="https://www.youtube.com/embed/zihoyz0u_cs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 ```
 
-Or, in pure Markdown, but losing the image sizing and border:
-
-```no-highlight
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
-```
-
-Referencing a bug by #bugID in your git commit links it to the slip. For example #1. 
+<div class="relative block h-0 p-0 overflow-hidden" style="padding-top:56.25%;" >
+  <iframe class="absolute top-0 left-0 bottom-0 w-full h-full" src="https://www.youtube.com/embed/zihoyz0u_cs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ---
 

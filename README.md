@@ -1,7 +1,7 @@
 # Use in development
 ```bash
 # https://github.com/TartanLlama/actions-eleventy
-
+npm install 
 npm start -- --port 4000
 ```
 
