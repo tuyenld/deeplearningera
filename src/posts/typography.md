@@ -23,7 +23,7 @@ Follows the [CommonMark spec](https://spec.commonmark.org/) + adds syntax extens
 [Inline HTML](#inline-html)  
 [Horizontal Rule](#horizontal-rule)  
 [Line Breaks](#line-breaks)  
-[YouTube Videos](#youTube-videos)  
+[YouTube Videos](#youtube-videos)  
 
 ## Headers
 
@@ -395,17 +395,15 @@ This line is only separated by a single newline, so it's a separate line in the 
 
 ## YouTube Videos
 
+{% raw %}
 ```html
-<!-- https://gist.github.com/christophengelmayer/0edd4d9b6fdeb6ff551fb80d957fd35d -->
+https://www.youtube.com/watch?v=SaCheA6Njc4
 
-<div class="relative block h-0 p-0 overflow-hidden" style="padding-top:56.25%;" >
-  <iframe class="absolute top-0 left-0 bottom-0 w-full h-full" src="https://www.youtube.com/embed/zihoyz0u_cs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+For example: {% ytb 'SaCheA6Njc4' %}
 ```
+{% endraw %}
 
-<div class="relative block h-0 p-0 overflow-hidden" style="padding-top:56.25%;" >
-  <iframe class="absolute top-0 left-0 bottom-0 w-full h-full" src="https://www.youtube.com/embed/zihoyz0u_cs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% ytb 'LXb3EKWsInQ' %}
 
 ---
 

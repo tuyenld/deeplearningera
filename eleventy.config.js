@@ -60,6 +60,17 @@ module.exports = (config) => {
     config.addCollection("tagList", tagListColl);
     config.addCollection("pagedPosts", pagedPostsColl);
     config.addCollection("pagedPostsByTag", pagedPostsByTagColl);
+
+    // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
+    config.addShortcode("ytb", function(URLid) {
+        return `<div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/${URLid}"
+                frameborder="0" allowfullscreen
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+            </iframe>
+        </div>`;
+
+    });
     
     return {
         dir: {
