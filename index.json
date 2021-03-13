@@ -1,0 +1,28 @@
+{
+  "intro": {
+    "intro": "Hi! 👋 I'm Dinh-Tuyen Le, an independent developer who's passionate about clean, testable code. I build, test, and deploy C++ applications.",
+    "hero-1": "I would love to work together!",
+    "hero-2": "Send me an email to get in touch.",
+    "cta": "Email Tuyen"
+  },
+  "categories": [
+    {
+      "name": "Web Dev",
+      "slug": "web",
+      "lightColor": "bee3f8",
+      "darkColor": "2c5282"
+    }
+    
+  ],
+  "posts": [
+    {
+      "title": "How to use masilotti theme",
+      "category": "web",
+      "date": "2021-01-28T00:00:00Z",
+      "url": "/xctest-name-readability/",
+      "description": "5 lines of code go a long way in making your test names much more readable.",
+      "image": "/https://www.mugshotbot.com/m?theme=two_up&mode=light&color=green&pattern=diagonal_lines&image=d33ff6b7&url=https://masilotti.com/xctest-name-readability/"
+    }
+    
+  ]
+}

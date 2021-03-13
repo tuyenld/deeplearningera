@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://deeplearningera.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://deeplearningera.com/" rel="alternate" type="text/html" /><updated>2021-03-13T05:23:28+00:00</updated><id>https://deeplearningera.com/feed.xml</id><title type="html">deeplearningera.com</title><subtitle>A blog from Dinh-Tuyen Le, an independent developer who's passionate about clean, testable code.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld.work@gmail.com</email></author><entry><title type="html">How to use masilotti theme</title><link href="https://deeplearningera.com/xctest-name-readability/" rel="alternate" type="text/html" title="How to use masilotti theme" /><published>2021-01-28T00:00:00+00:00</published><updated>2021-01-28T00:00:00+00:00</updated><id>https://deeplearningera.com/xctest-name-readability</id><content type="html" xml:base="https://deeplearningera.com/xctest-name-readability/">&lt;h2 id=&quot;notification-box&quot;&gt;Notification box&lt;/h2&gt;
+
+&lt;div class=&quot;tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12&quot;&gt;
+  &lt;div class=&quot;flex items-center&quot;&gt;
+    &lt;div class=&quot;-ml-2 mr-2 my-6 transform rotate-90 tracking-tighter font-semibold text-blue-400&quot;&gt;CODE&lt;/div&gt;
+    &lt;p class=&quot;lg:text-lg leading-5 text-blue-800&quot;&gt;This is TLDR notification&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://v1.tailwindcss.com/components/alerts&quot;&gt;See more&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Titled&lt;/p&gt;
+
+&lt;div role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;bg-red-500 text-white font-bold rounded-t px-4 py-2&quot;&gt;
+    Danger
+  &lt;/div&gt;
+  &lt;div class=&quot;border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700&quot;&gt;
+    &lt;p&gt;Something not ideal might be happening.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p class=&quot;text rounded-lg bg-blue-200 bg-opacity-25 text-blue-700 px-8 py-4 my-4&quot;&gt;
+  You can now wait for elements in UI Testing with a single line.
+&lt;/p&gt;
+
+&lt;p&gt;Notification with images&lt;/p&gt;
+&lt;p class=&quot;text rounded-lg bg-blue-200 bg-opacity-25 text-blue-700 px-8 pt-4 pb-8 my-4&quot;&gt;
+  Starting with Xcode 12, test failures automatically appear at the calling line!
+
+  &lt;img src=&quot;/images/helper-failure-xcode-12.png&quot; class=&quot;w-full rounded-lg mt-8 mb-0 lg:mb-0&quot; /&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&quot;images&quot;&gt;Images&lt;/h2&gt;
+
+&lt;p&gt;Image scrollable&lt;/p&gt;
+&lt;div class=&quot;h-64 overflow-y-scroll&quot;&gt;
+  &lt;img src=&quot;/images/xwing.app.png&quot; alt=&quot;Screenshot of https://xwing.app&quot; class=&quot;align-top my-0 lg:my-0&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;block text-center mt-4&quot;&gt;Screenshot of the landing page, &lt;a href=&quot;https://xwing.app&quot;&gt;https://xwing.app&lt;/a&gt;.&lt;/div&gt;
+
+&lt;p&gt;Images with text caption&lt;/p&gt;
+
+&lt;div class=&quot;max-w-sm mx-auto&quot;&gt;
+  &lt;img src=&quot;/images/two-unit-tests-zero-integration-tests.png&quot; alt=&quot;Two unit tests, zero integration tests&quot; class=&quot;rounded-lg shadow-lg mb-0 lg:mb-0&quot; /&gt;
+  &lt;p class=&quot;text-center text-sm text-gray-500&quot;&gt;Two unit tests, zero integration tests&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Items with timelines&lt;/p&gt;
+
+&lt;div class=&quot;relative&quot;&gt;
+  &lt;div class=&quot;border-r-4 border-primary-600 absolute h-full&quot; style=&quot;top: 4px; margin-left: 5.15rem;&quot;&gt;&lt;/div&gt;
+  &lt;ul class=&quot;timeline list-none m-0 p-0&quot;&gt;
+    &lt;li class=&quot;mb-4 pt-0 lg:pt-0&quot;&gt;
+  &lt;div class=&quot;flex items-center pb-3&quot;&gt;
+    &lt;div class=&quot;w-12 text-right font-bold text-xs tracking-wide uppercase text-gray-600 mr-5&quot;&gt;Aug 18&lt;/div&gt;
+    &lt;div class=&quot;bg-white border-4 border-primary-600 rounded-full h-6 w-6&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;font-medium text-gray-800 ml-5&quot;&gt;First notes in notebook&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+
+    &lt;li class=&quot;mb-4 pt-0 lg:pt-0&quot;&gt;
+  &lt;div class=&quot;flex items-center pb-3&quot;&gt;
+    &lt;div class=&quot;w-12 text-right font-bold text-xs tracking-wide uppercase text-gray-600 mr-5&quot;&gt;Aug 19&lt;/div&gt;
+    &lt;div class=&quot;bg-white border-4 border-primary-600 rounded-full h-6 w-6&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;font-medium text-gray-800 ml-5&quot;&gt;Start coding&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+
+    &lt;li class=&quot;mb-4 pt-0 lg:pt-0&quot;&gt;
+  &lt;div class=&quot;flex items-center pb-3&quot;&gt;
+    &lt;div class=&quot;w-12 text-right font-bold text-xs tracking-wide uppercase text-gray-600 mr-5&quot;&gt;Aug 21&lt;/div&gt;
+    &lt;div class=&quot;bg-white border-4 border-primary-600 rounded-full h-6 w-6&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;font-medium text-gray-800 ml-5&quot;&gt;Launch MVP&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+
+    &lt;li class=&quot;mb-4 pt-0 lg:pt-0&quot;&gt;
+  &lt;div class=&quot;flex items-center pb-3&quot;&gt;
+    &lt;div class=&quot;w-12 text-right font-bold text-xs tracking-wide uppercase text-gray-600 mr-5&quot;&gt;Aug 24&lt;/div&gt;
+    &lt;div class=&quot;bg-white border-4 border-primary-600 rounded-full h-6 w-6&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;font-medium text-gray-800 ml-5&quot;&gt;Launch landing page&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+
+    &lt;li class=&quot;mb-4 pt-0 lg:pt-0&quot;&gt;
+  &lt;div class=&quot;flex items-center pb-3&quot;&gt;
+    &lt;div class=&quot;w-12 text-right font-bold text-xs tracking-wide uppercase text-gray-600 mr-5&quot;&gt;Sep 9&lt;/div&gt;
+    &lt;div class=&quot;bg-white border-4 border-primary-600 rounded-full h-6 w-6&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;font-medium text-gray-800 ml-5&quot;&gt;Launch customizations&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+
+    &lt;li class=&quot;mb-4 pt-0 lg:pt-0&quot;&gt;
+  &lt;div class=&quot;flex items-center pb-3&quot;&gt;
+    &lt;div class=&quot;w-12 text-right font-bold text-xs tracking-wide uppercase text-gray-600 mr-5&quot;&gt;Sep 19&lt;/div&gt;
+    &lt;div class=&quot;bg-white border-4 border-primary-600 rounded-full h-6 w-6&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;font-medium text-gray-800 ml-5&quot;&gt;First paying customer!&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To use this, you have to add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gist&lt;/code&gt; to YAML Front Matter
+for example&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;layout: post
+gist: https://gist.github.com/tuyenld/79ada5f9e0ffdec990aad2db0becbadd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;flex rounded-md bg-blue-400 bg-opacity-25 px-4 my-12&quot;&gt;
+  &lt;div class=&quot;flex-1 items-baseline md:flex md:justify-between&quot;&gt;
+    &lt;p class=&quot;text-sm leading-5 text-blue-700&quot;&gt;
+      The code from this post is available on GitHub as a single gist.
+    &lt;/p&gt;
+
+    &lt;p class=&quot;text-sm leading-5 md:mt-0 md:ml-6&quot;&gt;
+      &lt;a href=&quot;https://gist.github.com/tuyenld/79ada5f9e0ffdec990aad2db0becbadd&quot; class=&quot;whitespace-no-wrap font-medium text-blue-700 hover:text-blue-600&quot;&gt;
+        View the code &amp;rarr;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here is an advertisement :)&lt;/p&gt;
+
+&lt;div class=&quot;md:flex md:items-center md:justify-between&quot;&gt;
+  &lt;h2 class=&quot;text-2xl sm:text-3xl leading-9 sm:leading-10 font-extrabold tracking-tight text-gray-900&quot;&gt;
+    Want to level up your testing?
+    &lt;br /&gt;
+    &lt;span class=&quot;text-xl sm:text-2xl text-primary-600&quot;&gt;I would love to pair program with you!&lt;/span&gt;
+  &lt;/h2&gt;
+
+  &lt;div class=&quot;flex lg:flex-shrink-0&quot;&gt;
+    &lt;div class=&quot;inline-flex rounded-md shadow&quot;&gt;
+      &lt;a href=&quot;mailto:tuyenld.work@gmail.com&quot; class=&quot;no-underline inline-flex items-center justify-center px-4 md:px-5 py-2 md:py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-600 hover:bg-primary-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out&quot;&gt;
+        &lt;span class=&quot;mr-4&quot;&gt;&lt;svg class=&quot;h-6 w-6&quot; fill=&quot;currentColor&quot; viewBox=&quot;0 0 20 20&quot;&gt;
+  &lt;path d=&quot;M15.989,19.129c0-2.246-2.187-3.389-4.317-4.307c-2.123-0.914-2.801-1.684-2.801-3.334 c0-0.989,0.648-0.667,0.932-2.481c0.12-0.752,0.692-0.012,0.802-1.729c0-0.684-0.313-0.854-0.313-0.854s0.159-1.013,0.221-1.793 c0.064-0.817-0.398-2.56-2.301-3.095C7.88,1.195,7.655,0.654,8.679,0.112c-2.24-0.104-2.761,1.068-3.954,1.93 c-1.015,0.756-1.289,1.953-1.24,2.59c0.065,0.78,0.223,1.793,0.223,1.793s-0.314,0.17-0.314,0.854 c0.11,1.718,0.684,0.977,0.803,1.729C4.481,10.822,5.13,10.5,5.13,11.489c0,1.65-0.212,2.21-2.336,3.124 C0.663,15.53,0,17,0.011,19.129C0.014,19.766,0,20,0,20h16C16,20,15.989,19.766,15.989,19.129z M18.528,13.365 c-1.135-0.457-1.605-1.002-1.605-2.066c0-0.641,0.418-0.432,0.602-1.603c0.077-0.484,0.447-0.008,0.518-1.115 c0-0.441-0.202-0.551-0.202-0.551s0.103-0.656,0.143-1.159c0.05-0.627-0.364-2.247-2.268-2.247c-1.903,0-2.318,1.62-2.269,2.247 c0.042,0.502,0.144,1.159,0.144,1.159s-0.202,0.109-0.202,0.551c0.071,1.107,0.441,0.631,0.518,1.115 c0.184,1.172,0.602,0.963,0.602,1.603c0,1.064-0.438,1.562-1.809,2.152c-0.069,0.029-0.12,0.068-0.183,0.102 c1.64,0.712,4.226,1.941,4.838,4.447H20c0,0,0-1.906,0-2.318C20,14.682,19.727,13.848,18.528,13.365z&quot; /&gt;
+&lt;/svg&gt;
+&lt;/span&gt;
+        Pair with Tuyen
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here is some series&lt;/p&gt;
+
+&lt;div class=&quot;bg-gray-100 text-gray-800 rounded-lg shadow-lg px-8 py-1 lg:py-1&quot;&gt;
+  &lt;p&gt;This is part 1 in a 1-part series on &lt;strong&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+  &lt;ol&gt;
+    
+    
+      
+        
+        &lt;li&gt;
+          
+            How to use masilotti theme
+          
+        &lt;/li&gt;
+      
+    
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;icons&quot;&gt;Icons&lt;/h2&gt;
+
+&lt;p&gt;🤠
+🙏&lt;/p&gt;
+
+&lt;h2 id=&quot;slide&quot;&gt;Slide&lt;/h2&gt;
+
+&lt;p&gt;Feel free to follow along with the slides.&lt;/p&gt;
+
+&lt;div class=&quot;embed-responsive aspect-ratio-16/9&quot;&gt;
+  &lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vRynAGN6pexj9XgECGEDU_tp8iENwB6ZrM22q5c9njXULmfnMT6-CPFrAl29Yma6CM4Cfp_BHWiD5lr/embed?start=false&amp;amp;loop=false&amp;amp;delayms=5000&quot; frameborder=&quot;0&quot; width=&quot;960&quot; height=&quot;425&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; style=&quot;overflow: hidden;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld.work@gmail.com</email></author><category term="web" /><summary type="html">Notification box</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.mugshotbot.com/m?theme=two_up&amp;mode=light&amp;color=green&amp;pattern=diagonal_lines&amp;image=d33ff6b7&amp;url=https://masilotti.com/xctest-name-readability/" /><media:content medium="image" url="https://www.mugshotbot.com/m?theme=two_up&amp;mode=light&amp;color=green&amp;pattern=diagonal_lines&amp;image=d33ff6b7&amp;url=https://masilotti.com/xctest-name-readability/" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
