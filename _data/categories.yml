@@ -34,14 +34,14 @@
   lightColor: "bee3f8"
   darkColor: "2c5282"
 
-# - name: Objective-C Testing
-#   slug: testing-objective-c
-#   color: purple
-#   lightColor: "e9d8fd"
-#   darkColor: "553c9a"
+- name: OpenCV
+  slug: opencv
+  color: purple
+  lightColor: "e9d8fd"
+  darkColor: "553c9a"
 
-# - name: Board Games
-#   slug: board-games
-#   color: pink
-#   lightColor: "fed7e2"
-#   darkColor: "97266d"
+- name: Computer Vision
+  slug: computer-vision
+  color: pink
+  lightColor: "fed7e2"
+  darkColor: "97266d"
