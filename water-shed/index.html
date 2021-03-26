@@ -5,22 +5,24 @@
     <meta charset="utf-8">
     <link type="application/atom+xml" rel="alternate" href="https://deeplearningera.com/feed.xml" title="deeplearningera.com" />
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Topics | deeplearningera.com</title>
+<title>Thuật toán Watershed ứng dụng trong xử lý ảnh | deeplearningera.com</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Topics" />
+<meta property="og:title" content="Thuật toán Watershed ứng dụng trong xử lý ảnh" />
 <meta name="author" content="Dinh-Tuyen Le" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A blog from Dinh-Tuyen Le, an independent developer who’s passionate about clean, testable code." />
-<meta property="og:description" content="A blog from Dinh-Tuyen Le, an independent developer who’s passionate about clean, testable code." />
-<link rel="canonical" href="https://deeplearningera.com/topics/" />
-<meta property="og:url" content="https://deeplearningera.com/topics/" />
+<meta name="description" content="watershed algorithm" />
+<meta property="og:description" content="watershed algorithm" />
+<link rel="canonical" href="https://deeplearningera.com/water-shed/" />
+<meta property="og:url" content="https://deeplearningera.com/water-shed/" />
 <meta property="og:site_name" content="deeplearningera.com" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-18T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Topics" />
+<meta property="twitter:title" content="Thuật toán Watershed ứng dụng trong xử lý ảnh" />
 <meta name="twitter:site" content="@tuyen_ld" />
 <meta name="twitter:creator" content="@tuyen_ld" />
 <script type="application/ld+json">
-{"headline":"Topics","description":"A blog from Dinh-Tuyen Le, an independent developer who’s passionate about clean, testable code.","@type":"WebPage","url":"https://deeplearningera.com/topics/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://deeplearningera.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"@context":"https://schema.org"}</script>
+{"headline":"Thuật toán Watershed ứng dụng trong xử lý ảnh","description":"watershed algorithm","datePublished":"2021-03-18T00:00:00+00:00","dateModified":"2021-03-18T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://deeplearningera.com/water-shed/"},"url":"https://deeplearningera.com/water-shed/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://deeplearningera.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta property="author" content="Dinh-Tuyen Le">
@@ -34,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1616722285">
+    <link rel="stylesheet" href="/css/site.css?v=1616722264">
 
     
       <script type="text/javascript">
@@ -78,107 +80,100 @@
 
 
       <section>
-        <div class="max-w-3xl mt-8 mx-auto px-4">
-  <div class="prose lg:prose-lg sm:pb-8 md:pb-16">
-    <h1>Topics</h1>
+        <article class="prose lg:prose-xl max-w-3xl mx-auto px-4 pt-8 md:pt-0 pb-16">
+  <div class="flex justify-center mb-2">
+    <time datetime="" class="block text-center text-gray-600 mr-2 post-date">
+      March 18, 2021
+    </time>
+
+    
+    
+    <a href="/topics/#computer-vision" class="inline-block no-underline mr-4">
+      <span class="inline-flex items-center px-4 leading-8 rounded-full font-medium leading-5 bg-pink-200 text-pink-800 hover:bg-pink-300 ml-4">
+        Computer Vision
+      </span>
+    </a>
   </div>
 
-  <div class="flex flex-wrap text-center md:-ml-4">
-    
-      <div class="inline-flex items-center text-center">
-        <a href="#web" class="text-sm md:text-base mt-3 mr-1 items-center px-3 py-1 md:mt-4 md:mr-2 items-center md:px-3 md:py-2 rounded-full font-medium leading-5 bg-blue-200 text-blue-900">
-          Web Dev
-        </a>
-      </div>
-    
-      <div class="inline-flex items-center text-center">
-        <a href="#opencv" class="text-sm md:text-base mt-3 mr-1 items-center px-3 py-1 md:mt-4 md:mr-2 items-center md:px-3 md:py-2 rounded-full font-medium leading-5 bg-purple-200 text-purple-900">
-          OpenCV
-        </a>
-      </div>
-    
-      <div class="inline-flex items-center text-center">
-        <a href="#computer-vision" class="text-sm md:text-base mt-3 mr-1 items-center px-3 py-1 md:mt-4 md:mr-2 items-center md:px-3 md:py-2 rounded-full font-medium leading-5 bg-pink-200 text-pink-900">
-          Computer Vision
-        </a>
-      </div>
-    
+  <h1 class="text-center p-name max-w-2xl mx-auto mb-4 lg:mb-8">
+    <a href="/water-shed/" class="u-url no-underline">Thuật toán Watershed ứng dụng trong xử lý ảnh</a>
+  </h1>
+
+  <div class="flex justify-center space-x-8 sm:space-x-12">
+    <div class="flex items-center space-x-2">
+      <img src="/images/author.png" alt="Dinh-Tuyen Le of https://deeplearningera.com" class="rounded-full w-10 h-10 my-0 lg:my-0">
+      <dl class="text-sm font-medium leading-5 text-gray-700 whitespace-no-wrap">
+        <dt class="sr-only">Name</dt>
+        <dd><a href="https://deeplearningera.com" class="no-underline text-gray-700 hover:text-primary-600" rel="author">Dinh-Tuyen Le</a></dd>
+        <dt class="sr-only">Twitter</dt>
+        <dd><a href="https://twitter.com/@tuyen_ld" class="no-underline text-primary-600 hover:text-primary-700">@tuyen_ld</a></dd>
+      </dl>
+    </div>
   </div>
 
-  
-    <div class="mt-16 mb-8">
-      <a name="web">
-        <h2 id="#web" class="rounded-full text-2xl font-medium leading-8 bg-blue-200 text-blue-900 md:-mx-8 px-5 sm:px-8 py-2 sm:py-5">
-          Web Dev
-        </h2>
-      </a>
+  <hr />
+
+  <div class="flex space-x-6">
+    
+
+
+
+    
+
+  </div>
+  <h1 id="các-khái-niệm">Các khái niệm</h1>
+<p>Mỗi một điểm trên ảnh được chia làm 3 loại sau:
+<img src="/images/khai-niem-co-ban.png" alt="" /></p>
+
+<ul>
+  <li>regional minimum: điểm đáy của hình nón</li>
+  <li>catchment basin: vùng từ điểm đáy hình nón đến <code class="language-plaintext highlighter-rouge">watershed line</code></li>
+  <li>watershed lines: điểm phân cách giữa các <code class="language-plaintext highlighter-rouge">catchment basin</code></li>
+</ul>
+
+<p>Thuật toán sẽ đi xác định 3 loại điểm này.</p>
+
+<h1 id="các-bước">Các bước</h1>
+<ol>
+  <li>Xác định <code class="language-plaintext highlighter-rouge">regional minimum</code></li>
+  <li>Bắt đầu từ các <code class="language-plaintext highlighter-rouge">regional minimum</code>, đổ nước dần dần vào <code class="language-plaintext highlighter-rouge">catchment basin</code></li>
+  <li>Khi nước dâng lên ở <code class="language-plaintext highlighter-rouge">catchment basin</code>, đến một mức nào đó các vùng <code class="language-plaintext highlighter-rouge">catchment basin</code> này bắt đầu chồng lấn lên nhau. Đây chình là <code class="language-plaintext highlighter-rouge">watershed lines</code> cần xác định</li>
+</ol>
+
+<h1 id="reference">Reference</h1>
+<ul>
+  <li><a href="https://cecas.clemson.edu/~stb/ece847/internal/lectures/lecture04-segmentation.ppt">cecas.clemson.edu ece847 lecture04-segmentation.ppt</a></li>
+  <li><a href="http://www.math.tau.ac.il/~turkel/notes/watershed_Segmentation.ppt">tau.ac.il turkel watershed_Segmentation.ppt</a></li>
+</ul>
+
+  <!-- <div class="sm:pt-4">
+  <h2 class="text-3xl lg:text-3xl leading-9 font-extrabold tracking-tight text-gray-900">
+    Testing, development, and product sneak peeks.
+    <br class="hidden sm:inline">
+    <span class="text-green-600">Sign up for my monthly newsletter.</span>
+  </h2>
+
+  <form class="sm:flex" action="https://static.mailerlite.com/webforms/submit/p1q2b1" data-code="p1q2b1" method="post" target="_blank">
+    <input aria-label="Email address" type="email" name="fields[email]" autocomplete="email" placeholder="Enter your email" required class="appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-green-300 transition duration-150 ease-in-out sm:max-w-xs">
+    <input type="hidden" name="ml-submit" value="1">
+
+    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+      <button class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:bg-green-400 transition duration-150 ease-in-out">
+        Sign up
+      </button>
     </div>
 
     
-      <div class="mb-8">
-        <a href="/xctest-name-readability/" class="group">
-          <h3 class="mt-4 text-xl leading-7 font-semibold text-gray-900 group-hover:underline">
-            How to use masilotti theme
-          </h3>
-
-          <time datetime="2021-01-28T00:00:00+00:00" class="text-sm leading-5 text-gray-700 mr-8 post-date">
-            January 28, 2021
-          </time>
-
-          <p class="pt-3 text-base leading-6 text-gray-700">5 lines of code go a long way in making your test names much more readable.</p>
+      <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+        <a href="/newsletter/" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-green-600 bg-white hover:bg-gray-50 no-underline">
+          Read the latest
         </a>
       </div>
     
-  
-    <div class="mt-16 mb-8">
-      <a name="opencv">
-        <h2 id="#opencv" class="rounded-full text-2xl font-medium leading-8 bg-purple-200 text-purple-900 md:-mx-8 px-5 sm:px-8 py-2 sm:py-5">
-          OpenCV
-        </h2>
-      </a>
-    </div>
-
-    
-      <div class="mb-8">
-        <a href="/opencv-getting-started/" class="group">
-          <h3 class="mt-4 text-xl leading-7 font-semibold text-gray-900 group-hover:underline">
-            OpenCV C++ getting started
-          </h3>
-
-          <time datetime="2021-03-25T00:00:00+00:00" class="text-sm leading-5 text-gray-700 mr-8 post-date">
-            March 25, 2021
-          </time>
-
-          <p class="pt-3 text-base leading-6 text-gray-700">OpenCV getting started</p>
-        </a>
-      </div>
-    
-  
-    <div class="mt-16 mb-8">
-      <a name="computer-vision">
-        <h2 id="#computer-vision" class="rounded-full text-2xl font-medium leading-8 bg-pink-200 text-pink-900 md:-mx-8 px-5 sm:px-8 py-2 sm:py-5">
-          Computer Vision
-        </h2>
-      </a>
-    </div>
-
-    
-      <div class="mb-8">
-        <a href="/water-shed/" class="group">
-          <h3 class="mt-4 text-xl leading-7 font-semibold text-gray-900 group-hover:underline">
-            Thuật toán Watershed ứng dụng trong xử lý ảnh
-          </h3>
-
-          <time datetime="2021-03-18T00:00:00+00:00" class="text-sm leading-5 text-gray-700 mr-8 post-date">
-            March 18, 2021
-          </time>
-
-          <p class="pt-3 text-base leading-6 text-gray-700">watershed algorithm</p>
-        </a>
-      </div>
-    
-  
+  </form>
 </div>
+ -->
+</article>
 
       </section>
     </div>

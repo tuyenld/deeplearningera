@@ -1,4 +1,315 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://deeplearningera.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://deeplearningera.com/" rel="alternate" type="text/html" /><updated>2021-03-13T09:19:06+00:00</updated><id>https://deeplearningera.com/feed.xml</id><title type="html">deeplearningera.com</title><subtitle>A blog from Dinh-Tuyen Le, an independent developer who's passionate about clean, testable code.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld.work@gmail.com</email></author><entry><title type="html">How to use masilotti theme</title><link href="https://deeplearningera.com/xctest-name-readability/" rel="alternate" type="text/html" title="How to use masilotti theme" /><published>2021-01-28T00:00:00+00:00</published><updated>2021-01-28T00:00:00+00:00</updated><id>https://deeplearningera.com/xctest-name-readability</id><content type="html" xml:base="https://deeplearningera.com/xctest-name-readability/">&lt;h2 id=&quot;notification-box&quot;&gt;Notification box&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://deeplearningera.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://deeplearningera.com/" rel="alternate" type="text/html" /><updated>2021-03-26T01:31:04+00:00</updated><id>https://deeplearningera.com/feed.xml</id><title type="html">deeplearningera.com</title><subtitle>A blog from Dinh-Tuyen Le, an independent developer who's passionate about clean, testable code.</subtitle><author><name>Dinh-Tuyen Le</name><email>tuyenld.work@gmail.com</email></author><entry><title type="html">OpenCV C++ getting started</title><link href="https://deeplearningera.com/opencv-getting-started/" rel="alternate" type="text/html" title="OpenCV C++ getting started" /><published>2021-03-25T00:00:00+00:00</published><updated>2021-03-25T00:00:00+00:00</updated><id>https://deeplearningera.com/opencv</id><content type="html" xml:base="https://deeplearningera.com/opencv-getting-started/">&lt;h1 id=&quot;install&quot;&gt;Install&lt;/h1&gt;
+
+&lt;h2 id=&quot;download&quot;&gt;Download&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Microsoft Visual C++ 2019 &lt;a href=&quot;https://download.visualstudio.microsoft.com/download/pr/3a7354bc-d2e4-430f-92d0-9abd031b5ee5/d9fc228ea71a98adc7bc5f5d8e8800684c647e955601ed721fcb29f74ace7536/vs_Community.exe&quot;&gt;Community&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nchc.dl.sourceforge.net/project/opencvlibrary/4.5.1/opencv-4.5.1-vc14_vc15.exe&quot;&gt;opencv_4.5.1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nchc.dl.sourceforge.net/project/opencvlibrary/3.4.13/opencv-3.4.13-vc14_vc15.exe&quot;&gt;opencv_3.4.13&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;configure&quot;&gt;Configure&lt;/h2&gt;
+&lt;p&gt;https://acodary.wordpress.com/2018/07/24/opencv-cai-dat-opencv-visual-c-tren-windows/&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Project &amp;gt; Property
+    &lt;ul&gt;
+      &lt;li&gt;Platform: x64&lt;/li&gt;
+      &lt;li&gt;Configuration Properties
+        &lt;ul&gt;
+          &lt;li&gt;C/C++ &amp;gt; General: opencv\build\include&lt;/li&gt;
+          &lt;li&gt;Linker &amp;gt; General: opencv\build\x64\vc15\lib&lt;/li&gt;
+          &lt;li&gt;Linker &amp;gt; Input:
+            &lt;ul&gt;
+              &lt;li&gt;For openCV_4.5.1: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;opencv_world451d.lib&lt;/code&gt; OR &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;opencv_world451.lib&lt;/code&gt; (d for debug)&lt;/li&gt;
+              &lt;li&gt;For opencv_3.4.13: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;opencv_world3413d.lib&lt;/code&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;D:\tuyenld\dev\opencv_3.4.13\build\x64\vc15\bin&lt;/code&gt; (remember to correct your path) to PATH environment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tăng-cường-chất-lượng-hình-ảnh&quot;&gt;Tăng cường chất lượng hình ảnh&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Phương pháp xử lý trên điểm ảnh
+    &lt;ul&gt;
+      &lt;li&gt;Biến đổi tuyến tính từng đoạn&lt;/li&gt;
+      &lt;li&gt;Biến đổi Logarithm&lt;/li&gt;
+      &lt;li&gt;Biến đổi âm bản&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Biến đổi tuyến tính từng đoạn
+    &lt;ul&gt;
+      &lt;li&gt;xử lý độ tương phản - giãn độ tương phản
+        &lt;ul&gt;
+          &lt;li&gt;xử lý những ảnh có độ tương phản thấp&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;cắt lớp cường độ sáng&lt;/li&gt;
+      &lt;li&gt;tách nhiễu và lấy ngưỡng ảnh&lt;/li&gt;
+      &lt;li&gt;cắt lớp bit&lt;/li&gt;
+      &lt;li&gt;Biến đổi âm bản&lt;/li&gt;
+      &lt;li&gt;Biến đổi dải động&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;learning-opencv-3-computer-vision-in-c-with-the-opencv-library-adrian-kaehler-and-gary-bradski&quot;&gt;Learning OpenCV 3 Computer Vision in C++ with the OpenCV Library (Adrian Kaehler and Gary Bradski)&lt;/h2&gt;
+
+&lt;p&gt;https://github.com/oreillymedia/Learning-OpenCV-3_examples&lt;/p&gt;
+
+&lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.opencv.org/3.4.13&quot;&gt;Online&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;distancetransform&quot;&gt;distanceTransform&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.tutorialspoint.com/opencv/opencv_distance_transformation.htm&quot;&gt;Ref1&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;takes &lt;strong&gt;binary images&lt;/strong&gt; as inputs.&lt;/li&gt;
+  &lt;li&gt;the &lt;strong&gt;gray level intensities&lt;/strong&gt; of the points inside the foreground regions are changed to distance their respective distances from the closest 0 value (boundary)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;type&quot;&gt;Type&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ninghang.blogspot.com/2012/11/list-of-mat-type-in-opencv.html&quot;&gt;Ref1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/8377091/what-are-the-differences-between-cv-8u-and-cv-32f-and-what-should-i-worry-about/8377146&quot;&gt;Ref2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A Mapping of Type to Numbers in OpenCV&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;C1&lt;/th&gt;
+      &lt;th&gt;C2&lt;/th&gt;
+      &lt;th&gt;C3&lt;/th&gt;
+      &lt;th&gt;C4&lt;/th&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Bits&lt;/th&gt;
+      &lt;th&gt;C++ type&lt;/th&gt;
+      &lt;th&gt;Range&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CV_8U&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;24&lt;/td&gt;
+      &lt;td&gt;Unsigned&lt;/td&gt;
+      &lt;td&gt;8bits&lt;/td&gt;
+      &lt;td&gt;uchar&lt;/td&gt;
+      &lt;td&gt;0~255&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CV_8S&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;17&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;Signed&lt;/td&gt;
+      &lt;td&gt;8bits&lt;/td&gt;
+      &lt;td&gt;char&lt;/td&gt;
+      &lt;td&gt;-128~127&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CV_16U&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;26&lt;/td&gt;
+      &lt;td&gt;Unsigned&lt;/td&gt;
+      &lt;td&gt;16bits&lt;/td&gt;
+      &lt;td&gt;ushort&lt;/td&gt;
+      &lt;td&gt;0~65.535&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CV_16S&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;19&lt;/td&gt;
+      &lt;td&gt;27&lt;/td&gt;
+      &lt;td&gt;Signed&lt;/td&gt;
+      &lt;td&gt;16bits&lt;/td&gt;
+      &lt;td&gt;short&lt;/td&gt;
+      &lt;td&gt;-32.768~32.767&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CV_32S&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+      &lt;td&gt;Signed&lt;/td&gt;
+      &lt;td&gt;32bits&lt;/td&gt;
+      &lt;td&gt;int&lt;/td&gt;
+      &lt;td&gt;-2.147.483.648~2.147.483.647&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CV_32F&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;13&lt;/td&gt;
+      &lt;td&gt;21&lt;/td&gt;
+      &lt;td&gt;29&lt;/td&gt;
+      &lt;td&gt;Float&lt;/td&gt;
+      &lt;td&gt;32bits&lt;/td&gt;
+      &lt;td&gt;float&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;0~1.0&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CV_64F&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;Double&lt;/td&gt;
+      &lt;td&gt;64bits&lt;/td&gt;
+      &lt;td&gt;double&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;del&gt;1 is the default number of channels&lt;/del&gt;&lt;/li&gt;
+  &lt;li&gt;CV_32F defines the depth of each element of the matrix
+CV_32FC1 defines both the depth of each element and the number of channels.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;scalar&quot;&gt;Scalar&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Template class for a 4-element vector derived from Vec.
+Being derived from Vec&amp;lt;Tp, 4&amp;gt; , 
+Scalar can be used just as typical 4-element vectors. 
+The type Scalar is widely used in OpenCV to pass pixel values.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;cv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Scalar&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;myWhite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Scala0: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myWhite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;; Scala1: &quot;&lt;/span&gt; 
+     &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myWhite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;; Scala2: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myWhite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Scala0: 255; Scala1: 255; Scala2: 500&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;differences-of-using-const-cvmat--cvmat--cvmat-or-const-cvmat-as-function-parameters&quot;&gt;Differences of using “const cv::Mat &amp;amp;”, “cv::Mat &amp;amp;”, “cv::Mat” or “const cv::Mat” as function parameters?&lt;/h1&gt;
+
+&lt;p&gt;https://stackoverflow.com/a/23486280&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;OpenCV handles all the memory &lt;a href=&quot;https://docs.opencv.org/2.4/modules/core/doc/intro.html#automatic-memory-management&quot;&gt;automatically&lt;/a&gt;.
+First of all, std::vector, Mat, and other data structures used by the functions and methods have destructors that deallocate the underlying memory buffers when needed. This means that the destructors do not always deallocate the buffers as in case of Mat. They take into account possible data sharing. A destructor decrements the reference counter associated with the matrix data buffer. The buffer is deallocated if and only if the reference counter reaches zero, that is, when no other structures refer to the same buffer. Similarly, when a Mat instance is copied, no actual data is really copied. Instead, the reference counter is incremented to memorize that there is another owner of the same data. There is also the Mat::clone method that creates a full copy of the matrix data.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;linear-vs-non-linear-filter&quot;&gt;Linear vs non-linear filter&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.embeddedcomputing.com/technology/analog-and-power/comparing-linear-versus-nonlinear-filters-in-image-processing&quot;&gt;Ref&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;In cases where the input data contains a large amount of noise but the magnitude is low, a linear low-pass filter may suffice.&lt;/li&gt;
+    &lt;li&gt;Conversely, if an image contains a low amount of noise but with relatively high magnitude, then a median filter may be more appropriate. In either case, the filter process changes the overall frequency content of the image.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;but-what-is-the-fourier-transform-a-visual-introduction&quot;&gt;But what is the Fourier Transform? A visual introduction&lt;/h1&gt;
+
+&lt;p&gt;https://youtu.be/spUNpyF58BY&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fourier Series &amp;gt; Periodic function of a continuous variable&lt;/li&gt;
+  &lt;li&gt;Fourier Transform &amp;gt; Not periodic function&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;clahe&quot;&gt;CLAHE&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://web.archive.org/web/20120113220509/http://radonc.ucsf.edu/research_group/jpouliot/tutorial/HU/Lesson7.htm&quot;&gt;Contrast Limited Adaptative Histogram Equalization (CLAHE)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/erich666/GraphicsGems/blob/master/gemsiv/clahe.c&quot;&gt;clahe.c&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cas.xav.free.fr/Graphics%20Gems%204%20-%20Paul%20S.%20Heckbert.pdf&quot;&gt;Contrast Limited Adaptive Histogram Equalization. Graphics Gems IV p482/579&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Division of the image into 8x8 contextual regions usually gives good results; this implies 64 contextual regions of size 64x64 when AHE is performed on a 512x512 image&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;??&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;To avoid visibility of region boundaries, a &lt;a href=&quot;https://theailearner.com/2018/12/29/image-processing-bilinear-interpolation/&quot;&gt;bilinear interpolation&lt;/a&gt; scheme is used (see Fig.2)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;laplacianlaplacian-of-gaussian&quot;&gt;Laplacian/Laplacian of Gaussian&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;https://homepages.inf.ed.ac.uk/rbf/HIPR2/log.htm&lt;/li&gt;
+  &lt;li&gt;https://hcimage.com/help/Content/Quantitation/Measurements/Processing%20and%20Analysis/Enhance/Enhance%20Operations.htm&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;https://softwarebydefault.com/2013/05/11/image-edge-detection/&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://youtu.be/Iz6C1ny-F2Q&quot;&gt;The Two-Dimensional Discrete Fourier Transform&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://youtu.be/YYGltoYEmKo&quot;&gt;2-Dimensional Discrete-Space Fourier Transform&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;edge preserving filter in image processing opencv&lt;/p&gt;
+
+&lt;h1 id=&quot;wavelet&quot;&gt;Wavelet&lt;/h1&gt;
+
+&lt;p&gt;http://www.nsl.hcmus.edu.vn/greenstone/collect/tiensifu/index/assoc/HASH01f6.dir/2.pdf
+&lt;a href=&quot;https://blancosilva.wordpress.com/teaching/mathematical-imaging/denoising-wavelet-thresholding/&quot;&gt;Denoising: wavelet thresholding&lt;/a&gt;
+&lt;a href=&quot;https://vdocuments.mx/download/ung-dung-phep-bien-doi-wavelet-trong-xu-ly-anh&quot;&gt;Ứng dụng phép biến đổi wavelet trong xử lý ảnh PTIT&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;mean-vs-median&quot;&gt;Mean vs Median&lt;/h1&gt;
+&lt;p&gt;The “mean” is the “average” you’re used to, where you add up all the numbers and then divide by the number of numbers. 
+The “median” is the “middle” value in the list of numbers.&lt;/p&gt;
+
+&lt;h1 id=&quot;point2f-sub-pixel-coordinate-origin&quot;&gt;Point2f, sub-pixel coordinate origin&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;References:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://answers.opencv.org/question/87923/sub-pixel-coordinate-origin/&quot;&gt;Sub-pixel coordinate origin&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/opencv/opencv/issues/10130&quot;&gt;Absent documentation for sub-pixel coordinate system&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;According to results above it seems that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cv2.remap&lt;/code&gt; uses coordinate system with pixel centers aligned to their integer indexes.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top-left pixel center&lt;/code&gt; coordinate is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(0,0)&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;top left pixel spans from (-0.5,-0.5) to (+0.5,+0.5)&lt;/li&gt;
+      &lt;li&gt;whole image spans from (-0.5,-0.5) to (W-0.5, H-0.5)
+&lt;img src=&quot;images/point2f-coordinate.png&quot; alt=&quot;Point2f coordinate&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld.work@gmail.com</email></author><category term="opencv" /><summary type="html">Install Download Microsoft Visual C++ 2019 Community opencv_4.5.1 opencv_3.4.13 Configure https://acodary.wordpress.com/2018/07/24/opencv-cai-dat-opencv-visual-c-tren-windows/ Project &amp;gt; Property Platform: x64 Configuration Properties C/C++ &amp;gt; General: opencv\build\include Linker &amp;gt; General: opencv\build\x64\vc15\lib Linker &amp;gt; Input: For openCV_4.5.1: opencv_world451d.lib OR opencv_world451.lib (d for debug) For opencv_3.4.13: opencv_world3413d.lib Add D:\tuyenld\dev\opencv_3.4.13\build\x64\vc15\bin (remember to correct your path) to PATH environment Tăng cường chất lượng hình ảnh Phương pháp xử lý trên điểm ảnh Biến đổi tuyến tính từng đoạn Biến đổi Logarithm Biến đổi âm bản Biến đổi tuyến tính từng đoạn xử lý độ tương phản - giãn độ tương phản xử lý những ảnh có độ tương phản thấp cắt lớp cường độ sáng tách nhiễu và lấy ngưỡng ảnh cắt lớp bit Biến đổi âm bản Biến đổi dải động Learning OpenCV 3 Computer Vision in C++ with the OpenCV Library (Adrian Kaehler and Gary Bradski) https://github.com/oreillymedia/Learning-OpenCV-3_examples Code Online distanceTransform Ref1 takes binary images as inputs. the gray level intensities of the points inside the foreground regions are changed to distance their respective distances from the closest 0 value (boundary) Type Ref1 Ref2 A Mapping of Type to Numbers in OpenCV   C1 C2 C3 C4 Type Bits C++ type Range CV_8U 0 8 16 24 Unsigned 8bits uchar 0~255 CV_8S 1 9 17 25 Signed 8bits char -128~127 CV_16U 2 10 18 26 Unsigned 16bits ushort 0~65.535 CV_16S 3 11 19 27 Signed 16bits short -32.768~32.767 CV_32S 4 12 20 28 Signed 32bits int -2.147.483.648~2.147.483.647 CV_32F 5 13 21 29 Float 32bits float 0~1.0 CV_64F 6 14 22 30 Double 64bits double   1 is the default number of channels CV_32F defines the depth of each element of the matrix CV_32FC1 defines both the depth of each element and the number of channels. Scalar Template class for a 4-element vector derived from Vec. Being derived from Vec&amp;lt;Tp, 4&amp;gt; , Scalar can be used just as typical 4-element vectors. The type Scalar is widely used in OpenCV to pass pixel values. cv::Scalar myWhite(255, 255, 500); cout &amp;lt;&amp;lt; &quot;Scala0: &quot; &amp;lt;&amp;lt; myWhite[0] &amp;lt;&amp;lt; &quot;; Scala1: &quot; &amp;lt;&amp;lt; myWhite[1] &amp;lt;&amp;lt; &quot;; Scala2: &quot; &amp;lt;&amp;lt; myWhite[2] &amp;lt;&amp;lt; endl; // Scala0: 255; Scala1: 255; Scala2: 500 Differences of using “const cv::Mat &amp;amp;”, “cv::Mat &amp;amp;”, “cv::Mat” or “const cv::Mat” as function parameters? https://stackoverflow.com/a/23486280 OpenCV handles all the memory automatically. First of all, std::vector, Mat, and other data structures used by the functions and methods have destructors that deallocate the underlying memory buffers when needed. This means that the destructors do not always deallocate the buffers as in case of Mat. They take into account possible data sharing. A destructor decrements the reference counter associated with the matrix data buffer. The buffer is deallocated if and only if the reference counter reaches zero, that is, when no other structures refer to the same buffer. Similarly, when a Mat instance is copied, no actual data is really copied. Instead, the reference counter is incremented to memorize that there is another owner of the same data. There is also the Mat::clone method that creates a full copy of the matrix data. Linear vs non-linear filter Ref In cases where the input data contains a large amount of noise but the magnitude is low, a linear low-pass filter may suffice. Conversely, if an image contains a low amount of noise but with relatively high magnitude, then a median filter may be more appropriate. In either case, the filter process changes the overall frequency content of the image. But what is the Fourier Transform? A visual introduction https://youtu.be/spUNpyF58BY Fourier Series &amp;gt; Periodic function of a continuous variable Fourier Transform &amp;gt; Not periodic function CLAHE Contrast Limited Adaptative Histogram Equalization (CLAHE) clahe.c Contrast Limited Adaptive Histogram Equalization. Graphics Gems IV p482/579 Division of the image into 8x8 contextual regions usually gives good results; this implies 64 contextual regions of size 64x64 when AHE is performed on a 512x512 image ?? To avoid visibility of region boundaries, a bilinear interpolation scheme is used (see Fig.2) Laplacian/Laplacian of Gaussian https://homepages.inf.ed.ac.uk/rbf/HIPR2/log.htm https://hcimage.com/help/Content/Quantitation/Measurements/Processing%20and%20Analysis/Enhance/Enhance%20Operations.htm https://softwarebydefault.com/2013/05/11/image-edge-detection/ The Two-Dimensional Discrete Fourier Transform 2-Dimensional Discrete-Space Fourier Transform edge preserving filter in image processing opencv Wavelet http://www.nsl.hcmus.edu.vn/greenstone/collect/tiensifu/index/assoc/HASH01f6.dir/2.pdf Denoising: wavelet thresholding Ứng dụng phép biến đổi wavelet trong xử lý ảnh PTIT Mean vs Median The “mean” is the “average” you’re used to, where you add up all the numbers and then divide by the number of numbers. The “median” is the “middle” value in the list of numbers. Point2f, sub-pixel coordinate origin References: Sub-pixel coordinate origin Absent documentation for sub-pixel coordinate system Conclusion According to results above it seems that cv2.remap uses coordinate system with pixel centers aligned to their integer indexes. top-left pixel center coordinate is (0,0) top left pixel spans from (-0.5,-0.5) to (+0.5,+0.5) whole image spans from (-0.5,-0.5) to (W-0.5, H-0.5)</summary></entry><entry><title type="html">Thuật toán Watershed ứng dụng trong xử lý ảnh</title><link href="https://deeplearningera.com/water-shed/" rel="alternate" type="text/html" title="Thuật toán Watershed ứng dụng trong xử lý ảnh" /><published>2021-03-18T00:00:00+00:00</published><updated>2021-03-18T00:00:00+00:00</updated><id>https://deeplearningera.com/watershed</id><content type="html" xml:base="https://deeplearningera.com/water-shed/">&lt;h1 id=&quot;các-khái-niệm&quot;&gt;Các khái niệm&lt;/h1&gt;
+&lt;p&gt;Mỗi một điểm trên ảnh được chia làm 3 loại sau:
+&lt;img src=&quot;/images/khai-niem-co-ban.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;regional minimum: điểm đáy của hình nón&lt;/li&gt;
+  &lt;li&gt;catchment basin: vùng từ điểm đáy hình nón đến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;watershed line&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;watershed lines: điểm phân cách giữa các &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;catchment basin&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thuật toán sẽ đi xác định 3 loại điểm này.&lt;/p&gt;
+
+&lt;h1 id=&quot;các-bước&quot;&gt;Các bước&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;Xác định &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;regional minimum&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Bắt đầu từ các &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;regional minimum&lt;/code&gt;, đổ nước dần dần vào &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;catchment basin&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Khi nước dâng lên ở &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;catchment basin&lt;/code&gt;, đến một mức nào đó các vùng &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;catchment basin&lt;/code&gt; này bắt đầu chồng lấn lên nhau. Đây chình là &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;watershed lines&lt;/code&gt; cần xác định&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cecas.clemson.edu/~stb/ece847/internal/lectures/lecture04-segmentation.ppt&quot;&gt;cecas.clemson.edu ece847 lecture04-segmentation.ppt&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.math.tau.ac.il/~turkel/notes/watershed_Segmentation.ppt&quot;&gt;tau.ac.il turkel watershed_Segmentation.ppt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Dinh-Tuyen Le</name><email>tuyenld.work@gmail.com</email></author><category term="computer-vision" /><summary type="html">Các khái niệm Mỗi một điểm trên ảnh được chia làm 3 loại sau: regional minimum: điểm đáy của hình nón catchment basin: vùng từ điểm đáy hình nón đến watershed line watershed lines: điểm phân cách giữa các catchment basin Thuật toán sẽ đi xác định 3 loại điểm này. Các bước Xác định regional minimum Bắt đầu từ các regional minimum, đổ nước dần dần vào catchment basin Khi nước dâng lên ở catchment basin, đến một mức nào đó các vùng catchment basin này bắt đầu chồng lấn lên nhau. Đây chình là watershed lines cần xác định Reference cecas.clemson.edu ece847 lecture04-segmentation.ppt tau.ac.il turkel watershed_Segmentation.ppt</summary></entry><entry><title type="html">How to use masilotti theme</title><link href="https://deeplearningera.com/xctest-name-readability/" rel="alternate" type="text/html" title="How to use masilotti theme" /><published>2021-01-28T00:00:00+00:00</published><updated>2021-01-28T00:00:00+00:00</updated><id>https://deeplearningera.com/xctest-name-readability</id><content type="html" xml:base="https://deeplearningera.com/xctest-name-readability/">&lt;h2 id=&quot;notification-box&quot;&gt;Notification box&lt;/h2&gt;
 
 &lt;div class=&quot;tldr flex rounded-md bg-blue-300 bg-opacity-25 px-4 my-12&quot;&gt;
   &lt;div class=&quot;flex items-center&quot;&gt;
@@ -146,7 +457,7 @@ gist: https://gist.github.com/tuyenld/79ada5f9e0ffdec990aad2db0becbadd
 &lt;p&gt;Here is some series&lt;/p&gt;
 
 &lt;div class=&quot;bg-gray-100 text-gray-800 rounded-lg shadow-lg px-8 py-1 lg:py-1&quot;&gt;
-  &lt;p&gt;This is part 1 in a 1-part series on &lt;strong&gt;&lt;/strong&gt;.&lt;/p&gt;
+  &lt;p&gt;This is part 1 in a 3-part series on &lt;strong&gt;&lt;/strong&gt;.&lt;/p&gt;
 
   &lt;ol&gt;
     
@@ -156,6 +467,24 @@ gist: https://gist.github.com/tuyenld/79ada5f9e0ffdec990aad2db0becbadd
         &lt;li&gt;
           
             How to use masilotti theme
+          
+        &lt;/li&gt;
+      
+    
+      
+        
+        &lt;li&gt;
+          
+            &lt;a href=&quot;/water-shed/&quot;&gt;Thuật toán Watershed ứng dụng trong xử lý ảnh&lt;/a&gt;
+          
+        &lt;/li&gt;
+      
+    
+      
+        
+        &lt;li&gt;
+          
+            &lt;a href=&quot;/opencv-getting-started/&quot;&gt;OpenCV C++ getting started&lt;/a&gt;
           
         &lt;/li&gt;
       

@@ -11,10 +11,38 @@
       "slug": "web",
       "lightColor": "bee3f8",
       "darkColor": "2c5282"
+    },
+    {
+      "name": "OpenCV",
+      "slug": "opencv",
+      "lightColor": "e9d8fd",
+      "darkColor": "553c9a"
+    },
+    {
+      "name": "Computer Vision",
+      "slug": "computer-vision",
+      "lightColor": "fed7e2",
+      "darkColor": "97266d"
     }
     
   ],
   "posts": [
+    {
+      "title": "OpenCV C++ getting started",
+      "category": "opencv",
+      "date": "2021-03-25T00:00:00Z",
+      "url": "/opencv-getting-started/",
+      "description": "OpenCV getting started",
+      "image": "/"
+    },
+    {
+      "title": "Thuật toán Watershed ứng dụng trong xử lý ảnh",
+      "category": "computer-vision",
+      "date": "2021-03-18T00:00:00Z",
+      "url": "/water-shed/",
+      "description": "watershed algorithm",
+      "image": "/"
+    },
     {
       "title": "How to use masilotti theme",
       "category": "web",
