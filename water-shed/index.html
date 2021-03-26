@@ -10,8 +10,8 @@
 <meta property="og:title" content="Thuật toán Watershed ứng dụng trong xử lý ảnh" />
 <meta name="author" content="Dinh-Tuyen Le" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="watershed algorithm" />
-<meta property="og:description" content="watershed algorithm" />
+<meta name="description" content="Watershed algorithm" />
+<meta property="og:description" content="Watershed algorithm" />
 <link rel="canonical" href="https://deeplearningera.com/water-shed/" />
 <meta property="og:url" content="https://deeplearningera.com/water-shed/" />
 <meta property="og:site_name" content="deeplearningera.com" />
@@ -22,7 +22,7 @@
 <meta name="twitter:site" content="@tuyen_ld" />
 <meta name="twitter:creator" content="@tuyen_ld" />
 <script type="application/ld+json">
-{"headline":"Thuật toán Watershed ứng dụng trong xử lý ảnh","description":"watershed algorithm","datePublished":"2021-03-18T00:00:00+00:00","dateModified":"2021-03-18T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://deeplearningera.com/water-shed/"},"url":"https://deeplearningera.com/water-shed/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://deeplearningera.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"@context":"https://schema.org"}</script>
+{"headline":"Thuật toán Watershed ứng dụng trong xử lý ảnh","description":"Watershed algorithm","datePublished":"2021-03-18T00:00:00+00:00","dateModified":"2021-03-18T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://deeplearningera.com/water-shed/"},"url":"https://deeplearningera.com/water-shed/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://deeplearningera.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta property="author" content="Dinh-Tuyen Le">
@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1616722264">
+    <link rel="stylesheet" href="/css/site.css?v=1616725887">
 
     
       <script type="text/javascript">
@@ -121,7 +121,7 @@
     
 
   </div>
-  <h1 id="các-khái-niệm">Các khái niệm</h1>
+  <h2 id="các-khái-niệm">Các khái niệm</h2>
 <p>Mỗi một điểm trên ảnh được chia làm 3 loại sau:
 <img src="/images/khai-niem-co-ban.png" alt="" /></p>
 
@@ -133,14 +133,14 @@
 
 <p>Thuật toán sẽ đi xác định 3 loại điểm này.</p>
 
-<h1 id="các-bước">Các bước</h1>
+<h2 id="các-bước-thực-hiện">Các bước thực hiện</h2>
 <ol>
   <li>Xác định <code class="language-plaintext highlighter-rouge">regional minimum</code></li>
   <li>Bắt đầu từ các <code class="language-plaintext highlighter-rouge">regional minimum</code>, đổ nước dần dần vào <code class="language-plaintext highlighter-rouge">catchment basin</code></li>
   <li>Khi nước dâng lên ở <code class="language-plaintext highlighter-rouge">catchment basin</code>, đến một mức nào đó các vùng <code class="language-plaintext highlighter-rouge">catchment basin</code> này bắt đầu chồng lấn lên nhau. Đây chình là <code class="language-plaintext highlighter-rouge">watershed lines</code> cần xác định</li>
 </ol>
 
-<h1 id="reference">Reference</h1>
+<h2 id="reference">Reference</h2>
 <ul>
   <li><a href="https://cecas.clemson.edu/~stb/ece847/internal/lectures/lecture04-segmentation.ppt">cecas.clemson.edu ece847 lecture04-segmentation.ppt</a></li>
   <li><a href="http://www.math.tau.ac.il/~turkel/notes/watershed_Segmentation.ppt">tau.ac.il turkel watershed_Segmentation.ppt</a></li>

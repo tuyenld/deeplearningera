@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1616722264">
+    <link rel="stylesheet" href="/css/site.css?v=1616725887">
 
     
       <script type="text/javascript">
@@ -125,16 +125,16 @@
     
 
   </div>
-  <h1 id="install">Install</h1>
+  <h2 id="install">Install</h2>
 
-<h2 id="download">Download</h2>
+<h3 id="download">Download</h3>
 <ul>
   <li>Microsoft Visual C++ 2019 <a href="https://download.visualstudio.microsoft.com/download/pr/3a7354bc-d2e4-430f-92d0-9abd031b5ee5/d9fc228ea71a98adc7bc5f5d8e8800684c647e955601ed721fcb29f74ace7536/vs_Community.exe">Community</a></li>
   <li><a href="https://nchc.dl.sourceforge.net/project/opencvlibrary/4.5.1/opencv-4.5.1-vc14_vc15.exe">opencv_4.5.1</a></li>
   <li><a href="https://nchc.dl.sourceforge.net/project/opencvlibrary/3.4.13/opencv-3.4.13-vc14_vc15.exe">opencv_3.4.13</a></li>
 </ul>
 
-<h2 id="configure">Configure</h2>
+<h3 id="configure">Configure</h3>
 <p>https://acodary.wordpress.com/2018/07/24/opencv-cai-dat-opencv-visual-c-tren-windows/</p>
 
 <ul>
@@ -158,7 +158,7 @@
   <li>Add <code class="language-plaintext highlighter-rouge">D:\tuyenld\dev\opencv_3.4.13\build\x64\vc15\bin</code> (remember to correct your path) to PATH environment</li>
 </ul>
 
-<h2 id="tăng-cường-chất-lượng-hình-ảnh">Tăng cường chất lượng hình ảnh</h2>
+<h3 id="tăng-cường-chất-lượng-hình-ảnh">Tăng cường chất lượng hình ảnh</h3>
 
 <ul>
   <li>Phương pháp xử lý trên điểm ảnh
@@ -184,16 +184,16 @@
   </li>
 </ul>
 
-<h2 id="learning-opencv-3-computer-vision-in-c-with-the-opencv-library-adrian-kaehler-and-gary-bradski">Learning OpenCV 3 Computer Vision in C++ with the OpenCV Library (Adrian Kaehler and Gary Bradski)</h2>
+<h3 id="learning-opencv-3-computer-vision-in-c-with-the-opencv-library-adrian-kaehler-and-gary-bradski">Learning OpenCV 3 Computer Vision in C++ with the OpenCV Library (Adrian Kaehler and Gary Bradski)</h3>
 
 <p>https://github.com/oreillymedia/Learning-OpenCV-3_examples</p>
 
-<h2 id="code">Code</h2>
+<h3 id="code">Code</h3>
 <ul>
   <li><a href="https://docs.opencv.org/3.4.13">Online</a></li>
 </ul>
 
-<h1 id="distancetransform">distanceTransform</h1>
+<h3 id="distancetransform">distanceTransform</h3>
 <p><a href="https://www.tutorialspoint.com/opencv/opencv_distance_transformation.htm">Ref1</a></p>
 
 <ul>
@@ -201,7 +201,7 @@
   <li>the <strong>gray level intensities</strong> of the points inside the foreground regions are changed to distance their respective distances from the closest 0 value (boundary)</li>
 </ul>
 
-<h1 id="type">Type</h1>
+<h3 id="type">Type</h3>
 
 <ul>
   <li><a href="http://ninghang.blogspot.com/2012/11/list-of-mat-type-in-opencv.html">Ref1</a></li>
@@ -311,7 +311,7 @@
 CV_32FC1 defines both the depth of each element and the number of channels.</li>
 </ul>
 
-<h2 id="scalar">Scalar</h2>
+<h3 id="scalar">Scalar</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Template class for a 4-element vector derived from Vec.
 Being derived from Vec&lt;Tp, 4&gt; , 
@@ -326,7 +326,7 @@ The type Scalar is widely used in OpenCV to pass pixel values.
 <span class="c1">// Scala0: 255; Scala1: 255; Scala2: 500</span>
 </code></pre></div></div>
 
-<h1 id="differences-of-using-const-cvmat--cvmat--cvmat-or-const-cvmat-as-function-parameters">Differences of using “const cv::Mat &amp;”, “cv::Mat &amp;”, “cv::Mat” or “const cv::Mat” as function parameters?</h1>
+<h3 id="differences-of-using-const-cvmat--cvmat--cvmat-or-const-cvmat-as-function-parameters">Differences of using “const cv::Mat &amp;”, “cv::Mat &amp;”, “cv::Mat” or “const cv::Mat” as function parameters?</h3>
 
 <p>https://stackoverflow.com/a/23486280</p>
 
@@ -335,7 +335,7 @@ The type Scalar is widely used in OpenCV to pass pixel values.
 First of all, std::vector, Mat, and other data structures used by the functions and methods have destructors that deallocate the underlying memory buffers when needed. This means that the destructors do not always deallocate the buffers as in case of Mat. They take into account possible data sharing. A destructor decrements the reference counter associated with the matrix data buffer. The buffer is deallocated if and only if the reference counter reaches zero, that is, when no other structures refer to the same buffer. Similarly, when a Mat instance is copied, no actual data is really copied. Instead, the reference counter is incremented to memorize that there is another owner of the same data. There is also the Mat::clone method that creates a full copy of the matrix data.</p>
 </blockquote>
 
-<h1 id="linear-vs-non-linear-filter">Linear vs non-linear filter</h1>
+<h3 id="linear-vs-non-linear-filter">Linear vs non-linear filter</h3>
 <p><a href="https://www.embeddedcomputing.com/technology/analog-and-power/comparing-linear-versus-nonlinear-filters-in-image-processing">Ref</a></p>
 <blockquote>
   <ul>
@@ -344,7 +344,7 @@ First of all, std::vector, Mat, and other data structures used by the functions 
   </ul>
 </blockquote>
 
-<h1 id="but-what-is-the-fourier-transform-a-visual-introduction">But what is the Fourier Transform? A visual introduction</h1>
+<h3 id="but-what-is-the-fourier-transform-a-visual-introduction">But what is the Fourier Transform? A visual introduction</h3>
 
 <p>https://youtu.be/spUNpyF58BY</p>
 
@@ -353,7 +353,7 @@ First of all, std::vector, Mat, and other data structures used by the functions 
   <li>Fourier Transform &gt; Not periodic function</li>
 </ul>
 
-<h1 id="clahe">CLAHE</h1>
+<h3 id="clahe">CLAHE</h3>
 
 <ul>
   <li><a href="https://web.archive.org/web/20120113220509/http://radonc.ucsf.edu/research_group/jpouliot/tutorial/HU/Lesson7.htm">Contrast Limited Adaptative Histogram Equalization (CLAHE)</a></li>
@@ -371,7 +371,7 @@ First of all, std::vector, Mat, and other data structures used by the functions 
   <p>To avoid visibility of region boundaries, a <a href="https://theailearner.com/2018/12/29/image-processing-bilinear-interpolation/">bilinear interpolation</a> scheme is used (see Fig.2)</p>
 </blockquote>
 
-<h1 id="laplacianlaplacian-of-gaussian">Laplacian/Laplacian of Gaussian</h1>
+<h3 id="laplacianlaplacian-of-gaussian">Laplacian/Laplacian of Gaussian</h3>
 
 <ul>
   <li>https://homepages.inf.ed.ac.uk/rbf/HIPR2/log.htm</li>
@@ -385,17 +385,17 @@ First of all, std::vector, Mat, and other data structures used by the functions 
 
 <p>edge preserving filter in image processing opencv</p>
 
-<h1 id="wavelet">Wavelet</h1>
+<h3 id="wavelet">Wavelet</h3>
 
 <p>http://www.nsl.hcmus.edu.vn/greenstone/collect/tiensifu/index/assoc/HASH01f6.dir/2.pdf
 <a href="https://blancosilva.wordpress.com/teaching/mathematical-imaging/denoising-wavelet-thresholding/">Denoising: wavelet thresholding</a>
 <a href="https://vdocuments.mx/download/ung-dung-phep-bien-doi-wavelet-trong-xu-ly-anh">Ứng dụng phép biến đổi wavelet trong xử lý ảnh PTIT</a></p>
 
-<h1 id="mean-vs-median">Mean vs Median</h1>
+<h3 id="mean-vs-median">Mean vs Median</h3>
 <p>The “mean” is the “average” you’re used to, where you add up all the numbers and then divide by the number of numbers. 
 The “median” is the “middle” value in the list of numbers.</p>
 
-<h1 id="point2f-sub-pixel-coordinate-origin">Point2f, sub-pixel coordinate origin</h1>
+<h3 id="point2f-sub-pixel-coordinate-origin">Point2f, sub-pixel coordinate origin</h3>
 
 <ul>
   <li>References:
@@ -410,7 +410,7 @@ The “median” is the “middle” value in the list of numbers.</p>
       <li><code class="language-plaintext highlighter-rouge">top-left pixel center</code> coordinate is <code class="language-plaintext highlighter-rouge">(0,0)</code></li>
       <li>top left pixel spans from (-0.5,-0.5) to (+0.5,+0.5)</li>
       <li>whole image spans from (-0.5,-0.5) to (W-0.5, H-0.5)
-<img src="images/point2f-coordinate.png" alt="Point2f coordinate" /></li>
+<img src="/images/point2f-coordinate.png" alt="Point2f coordinate" /></li>
     </ul>
   </li>
 </ul>
