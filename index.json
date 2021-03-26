@@ -44,6 +44,14 @@
       "image": "/"
     },
     {
+      "title": "Bilateral Filter",
+      "category": "computer-vision",
+      "date": "2021-03-18T00:00:00Z",
+      "url": "/bilateral-filter/",
+      "description": "Bilateral filter algorithm",
+      "image": "/"
+    },
+    {
       "title": "How to use masilotti theme",
       "category": "web",
       "date": "2021-01-28T00:00:00Z",

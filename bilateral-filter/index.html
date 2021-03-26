@@ -5,26 +5,24 @@
     <meta charset="utf-8">
     <link type="application/atom+xml" rel="alternate" href="https://deeplearningera.com/feed.xml" title="deeplearningera.com" />
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>The Masilotti Monthly, edition II | deeplearningera.com</title>
+<title>Bilateral Filter | deeplearningera.com</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="The Masilotti Monthly, edition II" />
+<meta property="og:title" content="Bilateral Filter" />
 <meta name="author" content="Dinh-Tuyen Le" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This month I’m covering Basecamp’s new version of Turbolinks and some new Swift testing techniques." />
-<meta property="og:description" content="This month I’m covering Basecamp’s new version of Turbolinks and some new Swift testing techniques." />
-<link rel="canonical" href="https://deeplearningera.com/newsletter/edition-ii/" />
-<meta property="og:url" content="https://deeplearningera.com/newsletter/edition-ii/" />
+<meta name="description" content="Bilateral filter algorithm" />
+<meta property="og:description" content="Bilateral filter algorithm" />
+<link rel="canonical" href="https://deeplearningera.com/bilateral-filter/" />
+<meta property="og:url" content="https://deeplearningera.com/bilateral-filter/" />
 <meta property="og:site_name" content="deeplearningera.com" />
-<meta property="og:image" content="https://www.mugshotbot.com/m?theme=two_up&mode=light&color=green&pattern=diagonal_lines&image=d33ff6b7&url=https://masilotti.com/newsletter/edition-ii/" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-01-15T00:00:00+00:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://www.mugshotbot.com/m?theme=two_up&mode=light&color=green&pattern=diagonal_lines&image=d33ff6b7&url=https://masilotti.com/newsletter/edition-ii/" />
-<meta property="twitter:title" content="The Masilotti Monthly, edition II" />
+<meta property="article:published_time" content="2021-03-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bilateral Filter" />
 <meta name="twitter:site" content="@tuyen_ld" />
 <meta name="twitter:creator" content="@tuyen_ld" />
 <script type="application/ld+json">
-{"headline":"The Masilotti Monthly, edition II","description":"This month I’m covering Basecamp’s new version of Turbolinks and some new Swift testing techniques.","datePublished":"2021-01-15T00:00:00+00:00","dateModified":"2021-01-15T00:00:00+00:00","@type":"BlogPosting","image":"https://www.mugshotbot.com/m?theme=two_up&mode=light&color=green&pattern=diagonal_lines&image=d33ff6b7&url=https://masilotti.com/newsletter/edition-ii/","mainEntityOfPage":{"@type":"WebPage","@id":"https://deeplearningera.com/newsletter/edition-ii/"},"url":"https://deeplearningera.com/newsletter/edition-ii/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://deeplearningera.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"@context":"https://schema.org"}</script>
+{"headline":"Bilateral Filter","description":"Bilateral filter algorithm","datePublished":"2021-03-18T00:00:00+00:00","dateModified":"2021-03-18T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://deeplearningera.com/bilateral-filter/"},"url":"https://deeplearningera.com/bilateral-filter/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://deeplearningera.com/images/avatar-circle.png"},"name":"Dinh-Tuyen Le"},"author":{"@type":"Person","name":"Dinh-Tuyen Le"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta property="author" content="Dinh-Tuyen Le">
@@ -83,116 +81,65 @@
 
       <section>
         <article class="prose lg:prose-xl max-w-3xl mx-auto px-4 pt-8 md:pt-0 pb-16">
-  <div class="flex mb-2">
-    <div class="font-medium block text-gray-600 ">
-      Edition II
-    </div>
+  <div class="flex justify-center mb-2">
+    <time datetime="" class="block text-center text-gray-600 mr-2 post-date">
+      March 18, 2021
+    </time>
+
+    
+    
+    <a href="/topics/#computer-vision" class="inline-block no-underline mr-4">
+      <span class="inline-flex items-center px-4 leading-8 rounded-full font-medium leading-5 bg-pink-200 text-pink-800 hover:bg-pink-300 ml-4">
+        Computer Vision
+      </span>
+    </a>
   </div>
 
-  <h1 class="p-name max-w-2xl mb-4 lg:mb-8">
-    <a href="/newsletter/edition-ii/" class="u-url no-underline">The Masilotti Monthly</a>
+  <h1 class="text-center p-name max-w-2xl mx-auto mb-4 lg:mb-8">
+    <a href="/bilateral-filter/" class="u-url no-underline">Bilateral Filter</a>
   </h1>
 
-  <div class="flex space-x-8 sm:space-x-12">
-    <div class="flex space-x-2">
-      <img src="/images/logo.png" alt="Joe Masilotti of Masilotti.com" class="w-10 h-10 my-0 lg:my-0">
+  <div class="flex justify-center space-x-8 sm:space-x-12">
+    <div class="flex items-center space-x-2">
+      <img src="/images/author.png" alt="Dinh-Tuyen Le of https://deeplearningera.com" class="rounded-full w-10 h-10 my-0 lg:my-0">
       <dl class="text-sm font-medium leading-5 text-gray-700 whitespace-no-wrap">
         <dt class="sr-only">Name</dt>
-        <dd><a href="https://deeplearningera.com" class="no-underline text-gray-700 hover:text-primary-600" rel="author">Joe Masilotti</a></dd>
+        <dd><a href="https://deeplearningera.com" class="no-underline text-gray-700 hover:text-primary-600" rel="author">Dinh-Tuyen Le</a></dd>
         <dt class="sr-only">Twitter</dt>
         <dd><a href="https://twitter.com/@tuyen_ld" class="no-underline text-primary-600 hover:text-primary-700">@tuyen_ld</a></dd>
       </dl>
     </div>
   </div>
 
-  <div class="sm:pt-4">
-  <h2 class="text-3xl lg:text-3xl leading-9 font-extrabold tracking-tight text-gray-900">
-    Testing, development, and product sneak peeks.
-    <br class="hidden sm:inline">
-    <span class="text-green-600">Sign up for my monthly newsletter.</span>
-  </h2>
-
-  <form class="sm:flex" action="https://static.mailerlite.com/webforms/submit/p1q2b1" data-code="p1q2b1" method="post" target="_blank">
-    <input aria-label="Email address" type="email" name="fields[email]" autocomplete="email" placeholder="Enter your email" required class="appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-green-300 transition duration-150 ease-in-out sm:max-w-xs">
-    <input type="hidden" name="ml-submit" value="1">
-
-    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-      <button class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:bg-green-400 transition duration-150 ease-in-out">
-        Sign up
-      </button>
-    </div>
-
-    
-  </form>
-</div>
-
   <hr />
 
-  <p>Hello and welcome to the second edition of The Masilotti Monthly! This month I’m covering Basecamp’s new version of Turbolinks and some new Swift testing techniques I’ve picked up recently.</p>
+  <div class="flex space-x-6">
+    
 
-<h2 id="turbolinks-is-dead-long-live-turbo-">Turbolinks is dead, long live Turbo ⚡</h2>
 
-<p>Turbolinks, <a href="https://masilotti.com/beermenus-and-turbolinks/">my favorite way to build hybrid apps</a>, recently received a huge update.</p>
 
-<h3 id="whats-turbolinks">What’s Turbo(links)?</h3>
+    
 
-<p><a href="https://github.com/turbolinks/turbolinks">Turbolinks</a> is a tiny JavaScript library bundled into Rails apps that makes pages load way faster. When a link is clicked, the library takes over and performs the request via AJAX then replaces the <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> element with the response.</p>
+  </div>
+  <h2 id="nội-dung-cơ-bản-của-thuật-toán">Nội dung cơ bản của thuật toán</h2>
 
-<p>Developers can leverage these “hooks” to build hybrid applications based on the mobile web site they already have. There are native iOS and Android components that work with the JavaScript to create native-feeling interactions.</p>
+<p>Sử dụng hàm Gaussian cho color domain (độ sáng của ảnh) và space domain (vị trí điểm ảnh)
+<img src="/images/bilateral-filter.png" alt="" /></p>
 
-<p>The native app renders the mobile web view and the frameworks handle the “glue” in between. Think: clicking a link pushes a new controller on the navigation stack. These tools enable small teams of developers to build high-fidelity cross-platform apps. <a href="https://apps.apple.com/us/app/basecamp-3/id1015603248">Basecamp</a>, <a href="https://apps.apple.com/us/app/hey-email/id1506603805">Hey</a>, <a href="https://apps.apple.com/us/app/zaarly/id964717947">Zaarly</a>, <a href="https://apps.apple.com/us/app/beermenus-find-great-beer/id917882057">BeerMenus</a>, and more are all Turbolinks-powered hybrid apps.</p>
+<p>Như vậy thuật toán đảm bảo được 2 yếu tố:</p>
+<ul>
+  <li>Làm mờ ảnh (lọc nhiễu)</li>
+  <li>Bảo toàn edge trong ảnh</li>
+</ul>
 
-<h3 id="turbo-and-hotwire">Turbo and Hotwire</h3>
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="http://people.csail.mit.edu/sparis/bf_course/slides/03_definition_bf.pdf">A Gentle Introduction
+to Bilateral Filtering
+and its Applications</a></li>
+</ul>
 
-<p>Cosmetically, the framework is now called Turbo and lives under the Hotwire “namespace” both on <a href="https://github.com/hotwired/">GitHub</a> and <a href="https://hotwire.dev">online</a>.</p>
-
-<p>The web side of Turbo saw a slew of new features and existing things to play with. To show how powerful Turbo is, <a href="https://hotwire.dev">watch DHH create a live-updating chat application</a> in just 15 minutes. 🤯</p>
-
-<p>The <a href="https://github.com/hotwired/turbo-ios">iOS component</a>, called an adapter, received a much smaller update. The <a href="https://github.com/hotwired/turbo-ios/blob/main/Docs/Migration.md">upgrade path</a> from Turbolinks is small and relatively painless; I was able to migrate two existing apps in a few hours each.</p>
-
-<p>The most exciting new feature for the native frameworks is Path Configuration. This moves the URL routing logic to a JSON file. The best part is that this file can live on your server, enabling remote configuration of different URLs. 💪</p>
-
-<h3 id="im-compiling-5-years-of-turbolinks-experience-">I’m compiling 5 years of Turbo(links) experience 📓</h3>
-
-<p>Since I started working with Turbo(links) in 2015, I’ve been noting all the gotchas and rough patches. I’m slowly compiling these into something more formal to share with the public.</p>
-
-<p>That said, I’m not sure if a book, video course, or blog post series will be the best fit. <strong>If you’re interested in learning more about Turbolinks, how would you prefer to learn?</strong></p>
-
-<p>P.S. If you need help on your Turbo(links) project ASAP don’t hesitate to <a href="mailto:joe@masilotti.com">send me an email</a>!</p>
-
-<h2 id="new-swift-testing-techniques">New Swift testing techniques</h2>
-
-<p>All three of my most recent blog posts have been around Swift unit testing. I’ve been experimenting with different approaches instead of always reaching for what I know will work.</p>
-
-<h3 id="swift-mocks-without-protocols"><a href="https://masilotti.com/swift-mocks-without-protocols/">Swift mocks without protocols</a></h3>
-
-<p>This post is an alternative to the usual protocol-driven mocking I’m such a huge fan of. Instead, you subclass your dependency and overwrite the functions you need to test.</p>
-
-<p>This approach doesn’t come without its own downsides. First, you can’t subclass a struct! Read <a href="https://masilotti.com/swift-mocks-without-protocols/">Swift mocks without protocols</a> for more information and how I’ll be using this technique in the future.</p>
-
-<h3 id="dynamically-verified-swift-mocks-"><a href="https://masilotti.com/dynamically-verified-swift-mocks/">Dynamically verified Swift mocks</a> 😻</h3>
-
-<p>Probably my favorite post of the month, this one explores a technique I picked up reading the source code of <a href="https://github.com/hotwired/turbo-ios">Turbo-iOS</a>.</p>
-
-<p>The goal is to remove the call-verifying properties in your mocks. For example, <code class="language-plaintext highlighter-rouge">private(set) var startWasCalled = false</code> to ensure <code class="language-plaintext highlighter-rouge">start()</code> was called. Instead, all function calls are added to an array which is interrogated in your test expectations.</p>
-
-<h3 id="how-to-set-wkwebviews-title-under-test"><a href="https://masilotti.com/set-wkwebview-title/">How to set WKWebView’s title under test</a></h3>
-
-<p>Even if you don’t work with WebKit, there’s a really interesting XCTest helper in this post you might find interesting.</p>
-
-<p><code class="language-plaintext highlighter-rouge">XCTKVOExpectation</code> is a built-in expectation that listens for key-value observing properties to change. The best part is that you tell it which value you are expecting! That means you can write asynchronous-like tests with very little boilerplate. 👌</p>
-
-<h2 id="some-personal-news-">Some personal news 🌎</h2>
-
-<p>My wife and I have officially moved to Portland, OR! If you know any Rails or iOS devs that are looking to make a new friend, please make a connection.</p>
-
-<h2 id="how-do-you-feel-about-hybrid-">How do you feel about hybrid? 🤔</h2>
-
-<p>A big portion of this edition was focused on Turbo(links) and native mobile apps. Personally, I find them an amazing middle ground for small teams to manage the three big platforms at the same time.</p>
-
-<p><strong>How do you feel about hybrid?</strong> I’d love to hear what you think, <a href="https://twitter.com/joemasilotti">mention or DM me on Twitter</a>!</p>
-
-  <div class="sm:pt-4">
+  <!-- <div class="sm:pt-4">
   <h2 class="text-3xl lg:text-3xl leading-9 font-extrabold tracking-tight text-gray-900">
     Testing, development, and product sneak peeks.
     <br class="hidden sm:inline">
@@ -210,9 +157,15 @@
     </div>
 
     
+      <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+        <a href="/newsletter/" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-green-600 bg-white hover:bg-gray-50 no-underline">
+          Read the latest
+        </a>
+      </div>
+    
   </form>
 </div>
-
+ -->
 </article>
 
       </section>
