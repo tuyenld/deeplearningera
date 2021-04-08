@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1616838470">
+    <link rel="stylesheet" href="/css/site.css?v=1617861826">
 
     
       <script type="text/javascript">
@@ -184,7 +184,14 @@
   </li>
 </ul>
 
-<h3 id="learning-opencv-3-computer-vision-in-c-with-the-opencv-library-adrian-kaehler-and-gary-bradski">Learning OpenCV 3 Computer Vision in C++ with the OpenCV Library (Adrian Kaehler and Gary Bradski)</h3>
+<h4 id="histogram-equalization-he">Histogram equalization (HE)</h4>
+<ul>
+  <li>Đây chỉ là một phương pháp, có thể cho kết quả không phải flat toàn spectrum</li>
+  <li>Nếu histogram một bài toán thay đổi liên tục thì phải dùng HE (tự động). Các trường hợp khác thì có thể fixed histogram và không cần dùng đến HE00</li>
+  <li>
+    <h3 id="learning-opencv-3-computer-vision-in-c-with-the-opencv-library-adrian-kaehler-and-gary-bradski">Learning OpenCV 3 Computer Vision in C++ with the OpenCV Library (Adrian Kaehler and Gary Bradski)</h3>
+  </li>
+</ul>
 
 <p>https://github.com/oreillymedia/Learning-OpenCV-3_examples</p>
 
@@ -391,13 +398,15 @@ First of all, std::vector, Mat, and other data structures used by the functions 
 <a href="https://blancosilva.wordpress.com/teaching/mathematical-imaging/denoising-wavelet-thresholding/">Denoising: wavelet thresholding</a>
 <a href="https://vdocuments.mx/download/ung-dung-phep-bien-doi-wavelet-trong-xu-ly-anh">Ứng dụng phép biến đổi wavelet trong xử lý ảnh PTIT</a></p>
 
-<h3 id="mean-vs-median">Mean vs Median</h3>
+<h3 id="mean-vs-median-filter">Mean vs Median filter</h3>
 <p>The “mean” is the “average” you’re used to, where you add up all the numbers and then divide by the number of numbers. 
 The “median” is the “middle” value in the list of numbers.</p>
 
-<h3 id="point2f-sub-pixel-coordinate-origin">Point2f, sub-pixel coordinate origin</h3>
-
 <ul>
+  <li>Median filter: thích hợp cho ảnh grayscale, không dùng cho binary image</li>
+  <li>
+    <h3 id="point2f-sub-pixel-coordinate-origin">Point2f, sub-pixel coordinate origin</h3>
+  </li>
   <li>References:
     <ul>
       <li><a href="https://answers.opencv.org/question/87923/sub-pixel-coordinate-origin/">Sub-pixel coordinate origin</a></li>
@@ -414,6 +423,31 @@ The “median” is the “middle” value in the list of numbers.</p>
     </ul>
   </li>
 </ul>
+
+<h3 id="understanding-and-evaluating-template-matching-methods">Understanding and evaluating template matching methods</h3>
+
+<p><a href="https://stackoverflow.com/a/58160295">alkasm’s anwser</a></p>
+
+<p>TM_SQDIFF_NORMED, TM_CCORR_NORMED, TM_CCOEFF_NORMED
+TM_SQDIFF, TM_CCORR, TM_CCOEFF</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>TM_CCOEFF_NORMED</th>
+      <th>TM_CCORR_NORMED</th>
+      <th>TM_SQDIFF_NORMED</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[-1, 1] (mean shifted)</td>
+      <td>[0, 1]</td>
+      <td>[0, 1]</td>
+    </tr>
+  </tbody>
+</table>
+
 
   <!-- <div class="sm:pt-4">
   <h2 class="text-3xl lg:text-3xl leading-9 font-extrabold tracking-tight text-gray-900">
