@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1617861826">
+    <link rel="stylesheet" href="/css/site.css?v=1618568819">
 
     
       <script type="text/javascript">
@@ -118,7 +118,7 @@
 
 
   <p class="inline-block text-sm rounded-full bg-green-200 bg-opacity-25 text-green-800 px-4 py-2">
-    6 minute read
+    7 minute read
   </p>
 
 
@@ -448,6 +448,19 @@ TM_SQDIFF, TM_CCORR, TM_CCOEFF</p>
   </tbody>
 </table>
 
+<h3 id="understanding-moments-function-in-opencv">Understanding Moments function in opencv</h3>
+<p><a href="https://stackoverflow.com/a/22472044">Michael Burdinov’s answer</a></p>
+
+<p>Definition of moments in image processing is borrowed from physics. Assume that each pixel in image has weight that is equal to its intensity. Then the point you defined is centroid (a.k.a. center of mass) of image.</p>
+
+<p>Assume that <code class="language-plaintext highlighter-rouge">I(x,y)</code> is the intensity of pixel <code class="language-plaintext highlighter-rouge">(x,y)</code> in image. Then <code class="language-plaintext highlighter-rouge">m(i,j)</code> is the sum for all possible x and y of: <code class="language-plaintext highlighter-rouge">I(x,y) * (x^i) * (y^j)</code>.</p>
+
+<p>And <a href="https://en.wikipedia.org/wiki/Image_moment">here</a> you can read a wiki article about all kinds of image moments (raw moments, central moments, scale/rotation invariant moments and so on). It is pretty good one and I recommend reading it.</p>
+
+<p>Adapting this to scalar (greyscale) image with pixel intensities I(x,y), raw image moments Mij are calculated by:
+${\displaystyle M_{ij}=\sum <em>{x}\sum _{y}x^{i}y^{j}I(x,y)\,!}M</em>=\sum _{x}\sum _{y}x^{i}y^{j}I(x,y)\,!$</p>
+
+<p>Centroid: ${\displaystyle \,\ {\bar {y}}}=\left{M_{00}}},{\frac {M_{01}}{M_{00}}}\right}}{\displaystyle \,\ {\bar {y}}}=\left{M_{00}}},{\frac {M_{01}}{M_{00}}}\right}}$</p>
 
   <!-- <div class="sm:pt-4">
   <h2 class="text-3xl lg:text-3xl leading-9 font-extrabold tracking-tight text-gray-900">
