@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1618568819">
+    <link rel="stylesheet" href="/css/site.css?v=1619690618">
 
     
       <script type="text/javascript">
@@ -118,7 +118,7 @@
 
 
   <p class="inline-block text-sm rounded-full bg-green-200 bg-opacity-25 text-green-800 px-4 py-2">
-    7 minute read
+    8 minute read
   </p>
 
 
@@ -312,10 +312,37 @@
   </tbody>
 </table>
 
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define CV_8U   0
+#define CV_8S   1 
+#define CV_16U  2
+#define CV_16S  3
+#define CV_32S  4
+#define CV_32F  5
+#define CV_64F  6
+</span>
+<span class="cp">#define CV_8UC1 CV_MAKETYPE(CV_8U,1)
+#define CV_8UC2 CV_MAKETYPE(CV_8U,2)
+#define CV_8UC3 CV_MAKETYPE(CV_8U,3)
+#define CV_8UC4 CV_MAKETYPE(CV_8U,4)
+#define CV_8UC(n) CV_MAKETYPE(CV_8U,(n))
+</span>
+<span class="cp">#define CV_CN_SHIFT   3
+#define CV_DEPTH_MAX  (1 &lt;&lt; CV_CN_SHIFT)
+</span>
+<span class="cp">#define CV_MAT_DEPTH_MASK       (CV_DEPTH_MAX - 1)
+#define CV_MAT_DEPTH(flags)     ((flags) &amp; CV_MAT_DEPTH_MASK)
+</span>
+<span class="cp">#define CV_MAKETYPE(depth,cn) (CV_MAT_DEPTH(depth) + (((cn)-1) &lt;&lt; CV_CN_SHIFT))
+</span>
+<span class="c1">// For example: </span>
+<span class="cp">#define CV_8UC4 CV_MAKETYPE(CV_8U,4)
+</span><span class="c1">// has type: 0+((4-1) &lt;&lt; 3) == 24</span>
+</code></pre></div></div>
+
 <ul>
-  <li><del>1 is the default number of channels</del></li>
-  <li>CV_32F defines the depth of each element of the matrix
-CV_32FC1 defines both the depth of each element and the number of channels.</li>
+  <li>1 is the default number of channels (<code class="language-plaintext highlighter-rouge">CV_8U = CV_8UC1 = 0</code>)</li>
+  <li>CV_32F defines the depth of each element of the matrix</li>
+  <li>CV_32FC1 defines both the depth of each element and the number of channels.</li>
 </ul>
 
 <h3 id="scalar">Scalar</h3>
@@ -461,6 +488,19 @@ TM_SQDIFF, TM_CCORR, TM_CCOEFF</p>
 ${\displaystyle M_{ij}=\sum <em>{x}\sum _{y}x^{i}y^{j}I(x,y)\,!}M</em>=\sum _{x}\sum _{y}x^{i}y^{j}I(x,y)\,!$</p>
 
 <p>Centroid: ${\displaystyle \,\ {\bar {y}}}=\left{M_{00}}},{\frac {M_{01}}{M_{00}}}\right}}{\displaystyle \,\ {\bar {y}}}=\left{M_{00}}},{\frac {M_{01}}{M_{00}}}\right}}$</p>
+
+<h2 id="clone-all-fiji-source-code">Clone all Fiji source code</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># https://forum.image.sc/t/getting-the-source-code-for-fiji-without-using-maven/31964/6</span>
+
+<span class="nb">sudo </span>apt <span class="nb">install </span>maven
+<span class="nb">sudo </span>apt <span class="nb">install </span>libxml2-utils
+
+git clone git://github.com/fiji/fiji
+<span class="nb">cd </span>fiji/bin
+wget https://github.com/scijava/scijava-scripts/raw/master/melting-pot.sh
+bin/melt.sh <span class="nt">-s</span>
+</code></pre></div></div>
 
   <!-- <div class="sm:pt-4">
   <h2 class="text-3xl lg:text-3xl leading-9 font-extrabold tracking-tight text-gray-900">
