@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1619690618">
+    <link rel="stylesheet" href="/css/site.css?v=1620299257">
 
     
       <script type="text/javascript">
@@ -118,7 +118,7 @@
 
 
   <p class="inline-block text-sm rounded-full bg-green-200 bg-opacity-25 text-green-800 px-4 py-2">
-    8 minute read
+    9 minute read
   </p>
 
 
@@ -501,6 +501,42 @@ git clone git://github.com/fiji/fiji
 wget https://github.com/scijava/scijava-scripts/raw/master/melting-pot.sh
 bin/melt.sh <span class="nt">-s</span>
 </code></pre></div></div>
+
+<h2 id="findcontours">findContours()</h2>
+<p>Reference:</p>
+<ul>
+  <li><a href="http://amroamroamro.github.io/mexopencv/opencv/contours_hierarchy_demo.html">mexopencv</a></li>
+  <li><a href="https://docs.opencv.org/3.4/d3/dc0/group__imgproc__shape.html#ga17ed9f5d79ae97bd4c7cf18403e1689a">group__imgproc__shape</a></li>
+</ul>
+
+<p>Remember:</p>
+<ul>
+  <li>In OpenCV, object to be found should be white and background should be black.</li>
+</ul>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">cv</span><span class="o">::</span><span class="n">findContours</span>
+    <span class="p">(</span>   <span class="n">InputOutputArray</span>    <span class="n">image</span><span class="p">,</span>
+        <span class="n">OutputArrayOfArrays</span> <span class="n">contours</span><span class="p">,</span>
+        <span class="n">OutputArray</span>         <span class="n">hierarchy</span><span class="p">,</span>
+        <span class="kt">int</span>                 <span class="n">mode</span><span class="p">,</span>
+        <span class="kt">int</span>                 <span class="n">method</span><span class="p">,</span>
+        <span class="n">Point</span>               <span class="n">offset</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span> 
+    <span class="p">)</span> 
+</code></pre></div></div>
+<p><strong>Contour Approximation Method</strong></p>
+
+<p>CHAIN_APPROX_NONE vs CHAIN_APPROX_SIMPLE</p>
+
+<p><img src="/images/findcontours-method.png" alt="findcontours-method" /></p>
+
+<p><strong>Contours Hierarchy</strong></p>
+
+<p><img src="/images/find-contours-hierarchy.png" alt="find-contours-hierarchy" /></p>
+
+<ul>
+  <li>Contour <strong>0,1,2</strong> are the same hierachy level</li>
+  <li><em>child</em>(2) = 2a; <em>parent</em>(2a) = 2</li>
+</ul>
 
   <!-- <div class="sm:pt-4">
   <h2 class="text-3xl lg:text-3xl leading-9 font-extrabold tracking-tight text-gray-900">
