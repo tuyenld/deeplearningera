@@ -36,7 +36,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/site.css?v=1620299257">
+    <link rel="stylesheet" href="/css/site.css?v=1621214006">
 
     
       <script type="text/javascript">
@@ -522,6 +522,11 @@ bin/melt.sh <span class="nt">-s</span>
         <span class="kt">int</span>                 <span class="n">method</span><span class="p">,</span>
         <span class="n">Point</span>               <span class="n">offset</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span> 
     <span class="p">)</span> 
+
+<span class="c1">// Note: absolute value of an area is used because</span>
+<span class="c1">// area may be positive or negative - in accordance with the</span>
+<span class="c1">// contour orientation</span>
+<span class="kt">double</span> <span class="n">i</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">fabs</span><span class="p">(</span><span class="n">cv</span><span class="o">::</span><span class="n">contourArea</span><span class="p">(</span><span class="n">cv</span><span class="o">::</span><span class="n">Mat</span><span class="p">(</span><span class="n">contour1</span><span class="p">)));</span>
 </code></pre></div></div>
 <p><strong>Contour Approximation Method</strong></p>
 
